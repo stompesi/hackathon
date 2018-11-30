@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"target": "ESNext",
+		"moduleResolution": "Node",
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"importHelpers": true,
+		"pretty": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"exclude": [
+		"node_modules"
+	]
+}

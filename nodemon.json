@@ -1,0 +1,11 @@
+{
+	"verbose": true,
+	"ignore": [
+		"*.ts",
+		"logs/*",
+		"sql/*",
+		"views/*",
+		"public/*"
+	],
+	"ext": "js json"
+}

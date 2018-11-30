@@ -1,0 +1,22 @@
+{
+	"db": {
+		"host": "localhost",
+		"port": 5432,
+		"database": "db_name",
+		"user": "user_name",
+		"password": "password"
+	},
+	"auth": {
+		"kakao": {
+			"clientId": "id"
+		},
+		"sns": {
+			"api_key": "key",
+			"api_secret": "secret",
+			"api_address": "address"
+		}
+	},
+	"web3": {
+		"url": "url"
+	}
+}
