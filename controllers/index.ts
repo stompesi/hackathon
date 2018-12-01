@@ -9,6 +9,7 @@ import freightRouter from './freightController'
 import navigationRouter from './navigationController'
 import vendorRouter from './vendorController'
 import imformationRouter from './imformationController'
+import jhRouter from './jhController'
 
 const router = express.Router();
 export default router
@@ -21,6 +22,7 @@ router.use('/freight', freightRouter);
 router.use('/navigation', navigationRouter);
 router.use('/vendor', vendorRouter);
 router.use('/imformation', imformationRouter);
+router.use('/jh', jhRouter);
 
 router.get('/', (req, res) => res.render('index.ejs'));
 router.get('/error', (req, res) => res.render('index.ejs'));

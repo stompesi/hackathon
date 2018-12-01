@@ -11,6 +11,7 @@ import driverRouter from './driver'
 import freightRouter from './freight'
 import vendorRouter from './vendor'
 import imformationRouter from './imformation'
+import jhRouter from './jh'
 
 const router = express.Router();
 export default router;
@@ -25,6 +26,7 @@ router.use('/driver', driverRouter);
 router.use('/vendor', vendorRouter);
 router.use('/freight', freightRouter);
 router.use('/imformation', imformationRouter);
+router.use('/jh', jhRouter);
 
 /**
  * `/api/*`의 error handler.

@@ -41,5 +41,39 @@ CREATE TABLE IMFORMATION (
     DESTNATION_DAY            varchar(50) NOT NULL,
     DESTNATION_TIME           varchar(50) NOT NULL,
 
+    START_DEST_LENGTH         INT NOT NULL,
+
     PRIMARY KEY (SEQ)
+);
+
+CREATE TABLE DELIVERY_HISTORY (
+    SEQ                       INT NOT NULL AUTO_INCREMENT,
+    CAR_MODEL                 varchar(50) NOT NULL,
+    WISH_CARRY                varchar(50) NOT NULL,
+    
+    START_POINT               varchar(50) NOT NULL,
+    DESTNATION                varchar(50) NOT NULL,
+    START_DEST_LENGTH         INT NOT NULL,
+    DEPOSIT                   INT NOT NULL,
+
+    PRIMARY KEY (SEQ)
+);
+
+CREATE TABLE DELIVERY_HISTORY (
+    ID                        varchar(50) NOT NULL,
+    MONEY_DATE                varchar(50) NOT NULL,
+    MONEY_STATUS              INT NOT NULL,
+    SENDER_MONEY              varchar(50) NOT NULL,
+    RECIVER_MONEY             varchar(50) NOT NULL,
+
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE DRIVER_MONEY (
+    ID                        varchar(50) NOT NULL,
+    ACCOUNT                   varchar(50) NOT NULL,
+    MONEY_WITHDRAW            INT NOT NULL,
+    BANK                      varchar(50) NOT NULL,
+
+    PRIMARY KEY (ID)
 );
