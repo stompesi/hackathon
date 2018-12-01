@@ -1,0 +1,290 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Square';
+}
+
+a { text-decoration:none; }
+a:link { color: inherit; }
+a:visited { color: inherit; }
+a:hover { color: inherit; }
+a:active { color: inherit; }
+
+
+.nav  {
+  width: 1638px;
+  height: 122px;
+  background-color: #ffffff;
+
+  padding-left: 142px;
+  padding-right: 142px;
+}
+
+.logo {
+  float: left;
+  margin-top: 37px;
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -2px;
+  text-align: left;
+  color: #006fff;
+}
+
+.logo .bold {
+  font-weight: bold;
+}
+
+
+.menu > div {
+  float:right;
+  margin-top: 43px;
+
+  width: 124px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #666666;
+  font-weight: bold;
+}
+
+.login-text {
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.5;
+  letter-spacing: -0.8px;
+  text-align: left;
+  color: #000;
+
+  background: #eee;
+}
+
+.conetents  {
+  width: 1638px;
+  height: 791px;
+  
+
+  margin-top: 84px;
+
+  margin-left: 142px;
+  margin-right: 142px;
+}
+
+.list-title-section {  
+  background-color: #ffffff;
+}
+
+.list-title-section .cago-info {
+  width: 290px;
+  display: inline-block;
+  
+  padding-top:35px;
+  padding-bottom:35px;
+
+  font-size: 30px;
+  color: #333;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+.list-title-section .up-down-info {
+  width: 275px;
+  display: inline-block;
+
+  padding-top:35px;
+  padding-bottom:35px;
+
+  font-size: 30px;
+  color: #333;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+.list-title-section .time-info {
+  width: 275px;
+  display: inline-block;
+
+  padding-top:35px;
+  padding-bottom:35px;
+
+  font-size: 30px;
+  color: #333;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+.list-title-section .car-number-info {
+  width: 178px;
+  display: inline-block;
+
+  padding-top:35px;
+  padding-bottom:35px;
+
+  font-size: 30px;
+  color: #333;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+.list-title-section .size-info {
+  width: 145px;
+  display: inline-block;
+
+  padding-top:35px;
+  padding-bottom:35px;
+
+  font-size: 30px;
+  color: #333; 
+
+  font-weight: bold;
+
+  text-align: center;
+}
+.list-title-section .cost-info {
+  width: 198px;
+  display: inline-block;
+
+  padding-top:35px;
+  padding-bottom:35px;
+
+  font-size: 30px;
+  color: #333;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+.list-title-section .detail {
+  width: 253px;
+  display: inline-block;
+
+  padding-top:35px;
+  padding-bottom:35px;
+
+  font-size: 30px;
+  color: #333;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+
+
+
+.cago-section {
+  background: white;
+  margin-top: 14px;
+}
+.cago-section .cago-info {
+  width: 290px;
+  display: inline-block;
+  
+  padding-top: 47px;
+  padding-bottom: 47px;
+
+  font-size: 30px;
+  color: #333;
+
+  text-align: center;
+}
+.cago-section .up-down-info {
+  width: 275px;
+  display: inline-block;
+
+  padding-top: 47px;
+  padding-bottom: 47px;
+
+  font-size: 30px;
+  color: #333;
+
+  text-align: center;
+}
+
+.up-down-info .img, .up-down-info .text {
+  display: inline-block;
+}
+.up-down-info .img {
+  margin-right: 20px;
+}
+.cago-section .time-info {
+  width: 275px;
+  display: inline-block;
+
+  line-height: 164px;
+  vertical-align: top;
+
+  font-size: 30px;
+  color: #333;
+
+  text-align: center;
+}
+.cago-section .car-number-info {
+  width: 178px;
+  display: inline-block;
+
+  line-height: 164px;
+  vertical-align: top;
+
+  font-size: 30px;
+  color: #333;
+
+  text-align: center;
+}
+.cago-section .size-info {
+  width: 145px;
+  display: inline-block;
+
+  line-height: 164px;
+  vertical-align: top;
+
+  font-size: 30px;
+  color: #333; 
+
+  text-align: center;
+}
+.cago-section .cost-info {
+  width: 198px;
+  display: inline-block;
+
+  line-height: 164px;
+  vertical-align: top;
+
+  font-size: 30px;
+  color: #333;
+
+  text-align: center;
+}
+.cago-section .detail {
+  width: 250px;
+  display: inline-block;
+
+  line-height: 164px;
+  vertical-align: top;
+
+  font-size: 30px;
+  color: #333;
+
+  text-align: center;
+  color: #006fff;
+}

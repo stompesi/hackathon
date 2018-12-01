@@ -44,5 +44,8 @@ CREATE TABLE CAGO (
     DESTNATION_DAY            varchar(50) NOT NULL,
     DESTNATION_TIME           varchar(50) NOT NULL,
 
+    VENDOR_ID                 varchar(50) NOT NULL,
+
     PRIMARY KEY (SEQ)
+    FOREIGN KEY (`VENDOR_ID`) REFERENCES `VENDOR` (`ID`)
 );

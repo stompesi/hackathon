@@ -33,12 +33,7 @@ router.get('/create', isVendor,
 		res.render('cago/create.ejs');
 	}));
 
-router.get('/logout', isVendor,
-	wrap('기업 - 로그아웃 요청', async (req, res) => {
-		req.session!.destroy((err: any) => {
-			if (err) throw err;
-		});
-
-		req.logout();
-		res.redirect('/vendor');
+router.get('/list', isVendor,
+	wrap('배차 - 등록 화면 요청', async (req, res) => {
+		res.render('cago/list.ejs');
 	}));
