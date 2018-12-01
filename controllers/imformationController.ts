@@ -6,9 +6,11 @@
  */
 
 import * as express from 'express'
+import {isImformation} from '../middlewares/asserter'
 import {isVendor} from '../middlewares/asserter'
 import {wrapGenerator} from '../middlewares/asyncWrapper'
 
+import Imformation from '../models/imformation'
 import Vendor from '../models/vendor'
 
 const wrap = wrapGenerator(module);
@@ -17,31 +19,31 @@ const router = express.Router();
 export default router;
 
 router.get('/',
-	wrap('기업 - 초기 화면 요청', async (req, res) => {
-		const vendor = await Vendor.findOne({
-			where: {id: req.session!.id},
-			attributes: ['id']
-		});
+	wrap('배차 - 초기 화면 요청', async (req, res) => {
+		// const imformation = await Imformation.findOne({
+		// 	// where: {id: req.session!.id},
+		// 	// attributes: ['id']
+		// });
 
-		if (vendor != null) {
-			return res.render('vendor/main.ejs');
-		}
+		// if (imformation != null) {
+		// 	return res.render('imformation/main.ejs');
+		// }
 
-		res.render('vendor/index.ejs');
+		res.render('imformation/index.ejs');
 	}));
 
 router.get('/create',
-	wrap('기업 - 등록 화면 요청', async (req, res) => {
-		const vendor = await Vendor.findOne({
-			where: {id: req.session!.id},
-			attributes: ['id']
-		});
+	wrap('배차 - 등록 화면 요청', async (req, res) => {
+		// const imformation = await Imformation.findOne({
+		// 	// where: {id: req.session!.id},
+		// 	// attributes: ['id']
+		// });
 
-		if (vendor != null) {
-			return res.render('../imformation/index.ejs');
-		}
+		// if (imformation != null) {
+		// 	return res.render('information/main.ejs');
+		// }
 
-		res.render('vendor/create.ejs');
+		res.render('imformation/create.ejs');
 	}));
 
 
@@ -63,14 +65,14 @@ router.get('/create',
 // 	}));
 
 
-router.get('/main', isVendor,
-	wrap('기업 - 메인 페이지 요청', async (req, res) => {
-		const renderData = {
+// router.get('/main', isImformation,
+// 	wrap('배차 - 메인 페이지 요청', async (req, res) => {
+// 		const renderData = {
 
-		};
+// 		};
 
-		res.render('vendor/main.ejs', renderData);
-	}));
+// 		res.render('imformation/index.ejs', renderData);
+// 	}));
 
 router.get('/logout', isVendor,
 	wrap('기업 - 로그아웃 요청', async (req, res) => {
@@ -79,5 +81,5 @@ router.get('/logout', isVendor,
 		});
 
 		req.logout();
-		res.redirect('/vendor/index.ejs');
+		res.redirect('/vendor');
 	}));

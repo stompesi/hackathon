@@ -38,7 +38,7 @@ export async function isVendor(req: Request, res: Response, next: NextFunction) 
 	logger.debug('사용자 - 로그인 확인 요청');
 
 	try {
-		if (!req.session!.kakaoId) return res.redirect('/driver');
+		if (!req.session!.id) return res.redirect('/vendor');
 
 		const vendor = await Vendor.findOne({
 			where: {id: req.session!.id},
@@ -46,10 +46,30 @@ export async function isVendor(req: Request, res: Response, next: NextFunction) 
 		});
 
 		if (vendor != null) return next();
-		return res.redirect('/driver');
+		return res.redirect('/vendor');
 	}
 	catch (err) {
 		logger.error('사용자 로그인 요청 처리 실패', err.stack);
-		return res.redirect('/driver');
+		return res.redirect('/vendor');
 	}
+}
+
+export async function isImformation(req: Request, res: Response, next: NextFunction) {
+	// logger.debug(' - 로그인 확인 요청');
+
+	// try {
+	// 	if (!req.session!.kakaoId) return res.redirect('/driver');
+
+	// 	const vendor = await Vendor.findOne({
+	// 		where: {id: req.session!.id},
+	// 		attributes: ['ID']
+	// 	});
+
+	// 	if (vendor != null) return next();
+	// 	return res.redirect('/vendor');
+	// }
+	// catch (err) {
+	// 	logger.error('사용자 로그인 요청 처리 실패', err.stack);
+	// 	return res.redirect('/vendor');
+	// }
 }

@@ -1,0 +1,67 @@
+<div>
+    <form id="sign_form" method="POST" action="/api/imformation">
+      <div>
+        <span>사업자 기본 정보</span>
+      </div>
+  
+      <div>
+        <label>
+          <span class="input-description">차종</span>
+          <span class="input-required">(필수)</span>
+        </label>
+        <br>
+        <input type="text" id="name" name="carModel">
+      </div>
+  
+      <div class="form-item-container">
+        <span class="input-description">희망운수량</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="wishCarry">
+      </div>
+
+      <div class="form-item-container">
+        <span class="input-description">출발지</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="startPoint">
+      </div>
+
+      <div class="form-item-container">
+        <span class="input-description">시작 날짜</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="startDay">
+      </div>
+
+      <div class="form-item-container">
+        <span class="input-description">시작 시간</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="startTime">
+      </div>
+
+      <div class="form-item-container">
+        <span class="input-description">도착지</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="destination">
+      </div>
+
+      <div class="form-item-container">
+        <span class="input-description">종료 날짜</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="destinationDay">
+      </div>
+
+      <div class="form-item-container">
+        <span class="input-description">종료 시간</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="destinationTime">
+      </div>
+  
+      <button type="submit">등록</button>
+    </form>
+  </div>
