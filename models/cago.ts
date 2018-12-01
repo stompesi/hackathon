@@ -23,8 +23,15 @@ export default class Imformation extends Model<Imformation> {
 	carModel!: string;
 
 	@AllowNull(false)
+	@Column({type: DataType.STRING(50), field: 'EXTERNAL_CAR_MODEL'})
+	externalCarModel!: string;
+
+	@AllowNull(false)
 	@Column({type: DataType.STRING(50), field: 'WISH_CARRY'})
-    wishCarry!: string
+	wishCarry!: string
+	
+	@Column({type: DataType.STRING(50), field: 'EXTERNAL_WISH_CARRY'})
+    externalWishCarry!: string
     
 	@AllowNull(false)
 	@Column({type: DataType.STRING(10), field: 'START_POINT'})
@@ -39,8 +46,8 @@ export default class Imformation extends Model<Imformation> {
 	startTime!: string;
 
 	@AllowNull(false)
-	@Column({type: DataType.STRING(10), field: 'DESTNATION'})
-    destination!: string;
+	@Column({type: DataType.STRING(10), field: 'DESTNATION_POINT'})
+    destinationPoint!: string;
     
     @AllowNull(false)
 	@Column({type: DataType.STRING(50), field: 'DESTNATION_DAY'})
