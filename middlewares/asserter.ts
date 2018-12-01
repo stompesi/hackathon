@@ -38,11 +38,11 @@ export async function isVendor(req: Request, res: Response, next: NextFunction) 
 	logger.debug('사용자 - 로그인 확인 요청');
 
 	try {
-		if (!req.session!.id) return res.redirect('/vendor');
+		if (!req.session!.vendorId) return res.redirect('/vendor');
 
 		const vendor = await Vendor.findOne({
-			where: {id: req.session!.id},
-			attributes: ['ID']
+			where: {id: req.session!.vendorId},
+			attributes: ['id']
 		});
 
 		if (vendor != null) return next();

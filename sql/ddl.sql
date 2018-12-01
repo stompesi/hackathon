@@ -28,16 +28,19 @@ CREATE TABLE VENDOR (
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE IMFORMATION (
+CREATE TABLE CAGO (
     SEQ                       INT NOT NULL AUTO_INCREMENT,
     CAR_MODEL                 varchar(50) NOT NULL,
+    EXTERNAL_CAR_MODEL        varchar(50),
+
     WISH_CARRY                varchar(50) NOT NULL,
+    EXTERNAL_WISH_CARRY       varchar(50),
     
     START_POINT               varchar(50) NOT NULL,
     START_DAY                 varchar(50) NOT NULL,
     START_TIME                varchar(50) NOT NULL,
     
-    DESTNATION                varchar(50) NOT NULL,
+    DESTNATION_POINT          varchar(50) NOT NULL,
     DESTNATION_DAY            varchar(50) NOT NULL,
     DESTNATION_TIME           varchar(50) NOT NULL,
 

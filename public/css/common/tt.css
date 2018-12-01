@@ -1,12 +1,17 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
 @import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
 
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Nanum Square';
 }
+
+a { text-decoration:none; }
+a:link { color: inherit; }
+a:visited { color: inherit; }
+a:hover { color: inherit; }
+a:active { color: inherit; }
 
 .nav  {
   width: 1638px;
@@ -34,7 +39,6 @@ body {
 .logo .bold {
   font-weight: bold;
 }
-
 
 .menu > div {
   float:right;

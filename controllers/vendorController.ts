@@ -17,32 +17,29 @@ const router = express.Router();
 export default router;
 
 router.get('/',
-	wrap('기업 - 초기 화면 요청', async (req, res) => {
+	wrap('벤더 - 초기 화면 요청', async (req, res) => {
 		const vendor = await Vendor.findOne({
-			where: {id: req.session!.id},
-			attributes: ['id']
+			where: {id: req.session!.vendorId},
+			attributes: ['COMPANNY_NAME'],
+			raw: true
 		});
 
+		
+
+		console.log("vendor", vendor.companyName);
 		if (vendor != null) {
-			return res.render('vendor/main.ejs');
+			return res.render('vendor/main.ejs', {
+				compannyName: vendor.companyName
+			});
 		}
 
 		res.render('vendor/index.ejs');
 	}));
 
+
+
 router.get('/join',
-	wrap('기업 - 등록 화면 요청', async (req, res) => {
-		// const vendor = await Vendor.findOne({
-		// 	where: {id: req.session!.id},
-		// 	attributes: ['id']
-		// });
-
-		// if (vendor != null) {
-		// 	return res.render('../imformation/index.ejs');
-		// }
-
-		res.render('vendor/join.ejs');
-	}));
+	wrap('기업 - 등록 화면 요청', async (req, res) => { res.render('vendor/join.ejs'); }));
 
 
 // router.get('/terms/privacy', isVendor,

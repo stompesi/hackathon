@@ -17,7 +17,7 @@ import {AuthHelper} from '../../lib/phoneAuthManager'
 import {isDriver} from '../../middlewares/asserter'
 import {wrapGenerator} from '../../middlewares/asyncWrapper'
 
-import Imformation from '../../models/imformation'
+import Cago from '../../models/cago'
 
 const wrap = wrapGenerator(module);
 const authHelper = new AuthHelper();
@@ -27,10 +27,9 @@ export default router;
 
 router.post('/', wrap('배차 - 등록', async (req, res) => {
 
-  const imformationInfo: Imformation = req.body;
+  const cagoInfo: Cago = req.body;
 
-  await Imformation.create(imformationInfo);
+  await Cago.create(cagoInfo);
 
   res.sendStatus(200);
-  
 }));

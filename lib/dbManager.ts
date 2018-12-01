@@ -2,7 +2,7 @@ import {Sequelize} from 'sequelize-typescript'
 
 import Driver from '../models/driver'
 import Vendor from '../models/vendor'
-import Imformation from '../models/imformation'
+import Imformation from '../models/cago'
 import logManager from './logManager'
 
 const logger = logManager(module);

@@ -10,8 +10,12 @@ import logManager from '../../lib/logManager'
 import driverRouter from './driver'
 import freightRouter from './freight'
 import vendorRouter from './vendor'
+<<<<<<< HEAD
 import imformationRouter from './imformation'
 import jhRouter from './jh'
+=======
+import cagoRouter from './cago'
+>>>>>>> 532b9801f8e862e5ccc980513a22396530a216f1
 
 const router = express.Router();
 export default router;
@@ -25,8 +29,12 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.use('/driver', driverRouter);
 router.use('/vendor', vendorRouter);
 router.use('/freight', freightRouter);
+<<<<<<< HEAD
 router.use('/imformation', imformationRouter);
 router.use('/jh', jhRouter);
+=======
+router.use('/cago', cagoRouter);
+>>>>>>> 532b9801f8e862e5ccc980513a22396530a216f1
 
 /**
  * `/api/*`의 error handler.

@@ -6,6 +6,7 @@
  */
 
 import * as express from 'express'
+import {Request, Response} from 'express'
 import {checkSchema} from 'express-validator/check'
 import * as randomString from 'randomstring'
 
@@ -18,7 +19,7 @@ import {isDriver} from '../../middlewares/asserter'
 import {wrapGenerator} from '../../middlewares/asyncWrapper'
 
 import Vendor from '../../models/vendor'
-import Imformation from '../../models/imformation'
+import Imformation from '../../models/cago'
 
 const wrap = wrapGenerator(module);
 const authHelper = new AuthHelper();
@@ -26,13 +27,15 @@ const authHelper = new AuthHelper();
 const router = express.Router();
 export default router;
 
-router.post('/', wrap('기사 - 등록', async (req, res) => {
+router.post('/', wrap('기사 - 등록', async (req: Request, res: Response) => {
 
   const vendorInfo: Vendor = req.body;
 
   await Vendor.create(vendorInfo);
 
-  res.sendStatus(200);
+  req.session!.vendorId = vendorInfo.id;
 
-  res.render('/imformation/index.ejs');
+  console.log(req.session!.vendorId);
+
+  res.sendStatus(200);
 }));
