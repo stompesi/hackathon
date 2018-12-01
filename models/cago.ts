@@ -10,7 +10,7 @@ import {
 @Table({
 	underscored: true,
 	underscoredAll: true,
-	tableName: 'IMFORMATION'
+	tableName: 'CAGO'
 })
 export default class Imformation extends Model<Imformation> {
 

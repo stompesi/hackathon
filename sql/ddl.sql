@@ -28,7 +28,7 @@ CREATE TABLE VENDOR (
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE IMFORMATION (
+CREATE TABLE CAGO (
     SEQ                       INT NOT NULL AUTO_INCREMENT,
     CAR_MODEL                 varchar(50) NOT NULL,
     WISH_CARRY                varchar(50) NOT NULL,

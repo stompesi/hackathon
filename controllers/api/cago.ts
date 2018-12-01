@@ -32,5 +32,4 @@ router.post('/', wrap('배차 - 등록', async (req, res) => {
   await Imformation.create(cagoInfo);
 
   res.sendStatus(200);
-  
 }));

@@ -19,7 +19,7 @@ import {isDriver} from '../../middlewares/asserter'
 import {wrapGenerator} from '../../middlewares/asyncWrapper'
 
 import Vendor from '../../models/vendor'
-import Imformation from '../../models/imformation'
+import Imformation from '../../models/cago'
 
 const wrap = wrapGenerator(module);
 const authHelper = new AuthHelper();
