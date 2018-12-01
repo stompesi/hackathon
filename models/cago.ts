@@ -4,8 +4,11 @@ import {
 	DataType,
 	Model,
 	PrimaryKey,
+	ForeignKey,
 	Table,
 } from 'sequelize-typescript'
+
+import Vendor from './vendor'
 
 @Table({
 	underscored: true,
@@ -56,5 +59,10 @@ export default class Imformation extends Model<Imformation> {
 	@AllowNull(false)
 	@Column({type: DataType.STRING(10), field: 'DESTNATION_TIME'})
 	destinationTime!: string;
+
+	@AllowNull(false)
+	@ForeignKey(() => Vendor)
+	@Column({type: DataType.STRING(50), field: 'VENDOR_ID'})
+	vendorId!: string;
 
 }

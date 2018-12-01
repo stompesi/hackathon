@@ -5,7 +5,6 @@ import logManager from '../lib/logManager'
 import kakaoRouter from './kakaoAuthController'
 
 import driverRouter from './driverController'
-import freightRouter from './freightController'
 import navigationRouter from './navigationController'
 import vendorRouter from './vendorController'
 import cagoRouter from './cagoController'
@@ -17,7 +16,6 @@ const logger = logManager(module);
 
 router.use('/', kakaoRouter);
 router.use('/driver', driverRouter);
-router.use('/freight', freightRouter);
 router.use('/navigation', navigationRouter);
 router.use('/vendor', vendorRouter);
 router.use('/cago', cagoRouter);

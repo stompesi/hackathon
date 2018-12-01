@@ -30,6 +30,7 @@ CREATE TABLE VENDOR (
 
 CREATE TABLE CAGO (
     SEQ                       INT NOT NULL AUTO_INCREMENT,
+    
     CAR_MODEL                 varchar(50) NOT NULL,
     EXTERNAL_CAR_MODEL        varchar(50),
 
@@ -46,6 +47,10 @@ CREATE TABLE CAGO (
 
     VENDOR_ID                 varchar(50) NOT NULL,
 
-    PRIMARY KEY (SEQ)
+    STATUS                    INT NOT NULL DEFAULT 0,
+
+    CREATED                   DATE NOT NULL DEFAULT NOW,
+
+    PRIMARY KEY (SEQ),
     FOREIGN KEY (`VENDOR_ID`) REFERENCES `VENDOR` (`ID`)
 );

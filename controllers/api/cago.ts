@@ -29,6 +29,7 @@ router.post('/', wrap('배차 - 등록', async (req, res) => {
 
   const cagoInfo: Cago = req.body;
 
+  cagoInfo.vendorId = req.session!.vendorId;
   await Cago.create(cagoInfo);
 
   res.sendStatus(200);

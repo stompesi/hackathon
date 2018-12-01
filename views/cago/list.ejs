@@ -20,6 +20,45 @@
         <div class="cost-info">운임료</div>
         <div class="detail">자세히보기</div>
       </div>
+
+      <% for (const cago of cagos) { %>
+        <div class="cago-section">
+          <div class="cago-info">
+            <% if(cago.status == 0) { %>
+              <span></span><span>요청중</span><br>
+            <% } else if(cago.status == 1) { %>
+              <span></span><span>배송중</span><br>
+            <% } else { %>
+              <span></span><span>배송완료</span><br>
+            <% } %>
+            <span>NO.<%=cago.seq%></span><br>
+          </div>
+          <div class="up-down-info">
+            <div class="img">
+              <img src="/img/ic-arrow.png">
+            </div>
+            <div class="text">
+              <span></span><span><%=cago.startPoint%></span><br>
+              <span><%=cago.destinationPoint%></span><br>
+            </div>
+          </div>
+          <div class="time-info">
+            <span><%=cago.created%></span>
+          </div>
+          <div class="car-number-info">
+            <span><%=cago.carModel%></span>
+          </div>
+          <div class="size-info">
+            <span><%=cago.wishCarry%></span>
+          </div>
+          <div class="cost-info">
+            <span><%=cago.cost%></span>원
+          </div>
+          <div class="detail">
+            <a href="/cago/vendor/<%=cago.seq%>">자세히보기><a>
+          </div>
+        </div>
+      <% } %>
       
       <div class="cago-section">
         <div class="cago-info">

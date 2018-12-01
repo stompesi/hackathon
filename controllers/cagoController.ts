@@ -12,6 +12,7 @@ import {wrapGenerator} from '../middlewares/asyncWrapper'
 
 import Imformation from '../models/cago'
 import Vendor from '../models/vendor'
+import Cago from '../models/cago'
 
 const wrap = wrapGenerator(module);
 
@@ -23,17 +24,25 @@ router.get('/',
 		res.render('cago/index.ejs');
 	}));
 
-router.get('/result',
-	wrap('배차 - 완료 화면 요청', async (req, res) => {
-		res.render('cago/result.ejs');
-	}));
-
 router.get('/create', isVendor,
 	wrap('배차 - 등록 화면 요청', async (req, res) => {
 		res.render('cago/create.ejs');
 	}));
 
-router.get('/list', isVendor,
+router.get('/result',
+	wrap('배차 - 완료 화면 요청', async (req, res) => {
+		res.render('cago/result.ejs');
+	}));
+
+router.get('/list/vendor', isVendor,
 	wrap('배차 - 등록 화면 요청', async (req, res) => {
-		res.render('cago/list.ejs');
+		const cagos = await Cago.findAll({
+			where: {vendorId: req.session!.vendorId}
+		})
+
+		console.log(cagos);
+		
+		res.render('cago/list.ejs', {
+			cagos: cagos
+		});
 	}));

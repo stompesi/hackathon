@@ -32,5 +32,4 @@ export default class Vendor extends Model<Vendor> {
 	@AllowNull(false)
 	@Column({type: DataType.STRING(10), field: 'COMPANNY_NUMBER'})
 	companyNumber!: string;
-
 }

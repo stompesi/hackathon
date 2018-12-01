@@ -30,27 +30,6 @@ router.get('/',
 		res.render('driver/index.ejs');
 	}));
 
-
-// router.get('/join', wrap('기사 - 등록', async (req, res) => res.render('driver/join.ejs')));
-
-// router.get('/terms/privacy', isDriver,
-//	wrap('사용자 - 개인정보 처리 방침 페이지 요청', async (req, res) => res.render('driver/member/terms/privacy.ejs')));
-
-
-
-// router.get('/notification/setting', isDriver,
-// 	wrap('사용자 - 알림 설정 페이지 요청', async (req, res) => {
-// 		const driver = await Driver.findById(req.session!.hexId) as Driver;
-
-// 		res.render('driver/member/notification/index.ejs', {
-// 			driverInfo: req.session,
-// 			isPaymentNoti: driver.isPaymentNoti,
-// 			isReviewNoti: driver.isReviewNoti,
-// 			isGiftNoti: driver.isGiftNoti
-// 		})
-// 	}));
-
-
 router.get('/main', isDriver,
 	wrap('사용자 - 메인 페이지 요청', async (req, res) => {
 		const renderData = {
