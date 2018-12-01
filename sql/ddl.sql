@@ -16,3 +16,14 @@ CREATE TABLE `hackathon`.`DRIVER` (
   `COMPANNY` VARCHAR(45) NULL,
   PRIMARY KEY (`LICENSE`)
 ) DEFAULT CHARACTER SET = DEFAULT;
+
+CREATE TABLE VENDER (
+    ID                          varchar(50) NOT NULL,
+    PASSWD                      varchar(50) NOT NULL,
+    
+    BUSINESS_NUMBER             char(10) NOT NULL,
+    COMPANNY_NAME               varchar(50) NOT NULL,
+    COMPANNY_NUMBER             varchar(10) NOT NULL,
+
+    PRIMARY KEY (ID)
+);
