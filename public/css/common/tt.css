@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Square';
+}
+
+.nav  {
+  width: 1638px;
+  height: 122px;
+  background-color: #ffffff;
+
+  padding-left: 142px;
+  padding-right: 142px;
+}
+
+.logo {
+  float: left;
+  margin-top: 37px;
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -2px;
+  text-align: left;
+  color: #006fff;
+}
+
+.logo .bold {
+  font-weight: bold;
+}
+
+
+.menu > div {
+  float:right;
+  margin-top: 43px;
+
+  width: 124px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #666666;
+  font-weight: bold;
+}
+
+.comment-section {
+  margin-left: 366px;
+  margin-top: 109px;
+
+  height: 92px;
+}
+
+.welcome-text-section, .profile-section {
+  float: left;
+}
+
+.welcome-text-section {
+  margin-left: 35px;
+  
+  font-size: 38px;
+}
+
+.company-name {
+  color: #006fff;
+  font-weight: bold;
+}
+
+.select-menu-section {
+  margin-left: 315px;
+}
+
+.card-section{
+  float: left;
+}
