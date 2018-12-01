@@ -1,0 +1,160 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Square';
+}
+
+.nav  {
+  width: 1638px;
+  height: 122px;
+  background-color: #ffffff;
+
+  padding-left: 142px;
+  padding-right: 142px;
+}
+
+.logo {
+  float: left;
+  margin-top: 37px;
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -2px;
+  text-align: left;
+  color: #006fff;
+}
+
+.logo .bold {
+  font-weight: bold;
+}
+
+
+.menu > div {
+  float:right;
+  margin-top: 43px;
+
+  width: 124px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #666666;
+  font-weight: bold;
+}
+
+.login-text {
+  width: 81px;
+  height: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.5;
+  letter-spacing: -0.8px;
+  text-align: left;
+  color: #333333;
+}
+
+
+.conetents  {
+  width: 1638px;
+  height: 791px;
+  background-color: #ffffff;
+
+  margin-top: 84px;
+
+  margin-left: 142px;
+  margin-right: 142px;
+}
+
+.main-image, .main-login {
+  float: left;
+}
+
+.main-login {
+  padding-top: 76px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+
+.login-input  {
+  background-color: #ffffff;
+  width: 600px;
+  height: 80px;
+
+  border: 1px solid #dcdcdc;
+
+  font-size: 30px;
+
+  padding-left: 38px;
+
+  margin-bottom: 16px;
+}
+
+.stay-login {
+  width: 190px;
+  height: 39px;
+  font-size: 21px;
+  /* font-style: normal; */
+  font-stretch: normal;
+  line-height: 27px;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #333333;
+  float: left;
+  margin-left: 9px;
+}
+
+#stay_login_checkbox  {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  float: left;
+  border: 1px solid #dcdcdc;
+}
+
+.login-btn {
+  margin-top: 40px;
+  width: 600px;
+  height: 91px;
+  background-color: #006fff;
+  
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.login-hr {
+  margin-top: 185px;
+}
+
+.login-control-text {
+  /* width: 140px; */
+  height: 25px;
+  font-family: NanumSquareR;
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3.08;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #333333;
+  text-align: right;
+}
+
+.login-control-text > span{
+  margin-left: 20px;
+}
