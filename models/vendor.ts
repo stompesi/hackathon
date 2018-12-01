@@ -10,9 +10,9 @@ import {
 @Table({
 	underscored: true,
 	underscoredAll: true,
-	tableName: 'VENDER'
+	tableName: 'VENDOR'
 })
-export default class User extends Model<User> {
+export default class Vendor extends Model<Vendor> {
 	@PrimaryKey
 	@Column({type: DataType.STRING(50), field: 'ID'})
 	id!: string;

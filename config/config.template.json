@@ -1,22 +1,23 @@
 {
 	"db": {
-		"host": "localhost",
-		"port": 5432,
-		"database": "db_name",
-		"user": "user_name",
-		"password": "password"
+	   "host": "115.178.75.136",
+	   "port": 3306,
+	   "database": "hackathon",
+	   "user": "root",
+	   "password": "root99"
 	},
 	"auth": {
-		"kakao": {
-			"clientId": "id"
-		},
-		"sns": {
-			"api_key": "key",
-			"api_secret": "secret",
-			"api_address": "address"
-		}
+	   "kakao": {
+		  "clientId": "d24ff528123a44377b4798911ac89b27",
+		  "callbackUrl": "/auth/login/kakao/callback"
+	   },
+	   "sns": {
+		  "api_key": "NCSFIRDC0VPFZRN6",
+		  "api_secret": "JO1YFRFDECAYYIU1DAWRS2ZQACRIHYYE",
+		  "api_address": "https://api.coolsms.co.kr/sms/1.5/send"
+	   }
 	},
 	"web3": {
-		"url": "url"
+	   "url": "http://147.46.240.248:3200"
 	}
-}
+  }

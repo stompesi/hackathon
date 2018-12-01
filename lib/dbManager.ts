@@ -1,6 +1,8 @@
 import {Sequelize} from 'sequelize-typescript'
 
 import Driver from '../models/driver'
+import Vendor from '../models/vendor'
+import Imformation from '../models/imformation'
 import logManager from './logManager'
 
 const logger = logManager(module);
@@ -22,6 +24,6 @@ export const sequelize = new Sequelize({
 	timezone: '+09:00'
 });
 
-sequelize.addModels([Driver]);
+sequelize.addModels([Driver, Vendor, Imformation]);
 
-// Driver.removeAttribute('id');
+//Driver.removeAttribute('id');

@@ -17,7 +17,7 @@ CREATE TABLE `hackathon`.`DRIVER` (
   PRIMARY KEY (`LICENSE`)
 ) DEFAULT CHARACTER SET = DEFAULT;
 
-CREATE TABLE VENDER (
+CREATE TABLE VENDOR (
     ID                          varchar(50) NOT NULL,
     PASSWD                      varchar(50) NOT NULL,
     
@@ -26,4 +26,20 @@ CREATE TABLE VENDER (
     COMPANNY_NUMBER             varchar(10) NOT NULL,
 
     PRIMARY KEY (ID)
+);
+
+CREATE TABLE IMFORMATION (
+    SEQ                       INT NOT NULL AUTO_INCREMENT,
+    CAR_MODEL                 varchar(50) NOT NULL,
+    WISH_CARRY                varchar(50) NOT NULL,
+    
+    START_POINT               varchar(50) NOT NULL,
+    START_DAY                 varchar(50) NOT NULL,
+    START_TIME                varchar(50) NOT NULL,
+    
+    DESTNATION                varchar(50) NOT NULL,
+    DESTNATION_DAY            varchar(50) NOT NULL,
+    DESTNATION_TIME           varchar(50) NOT NULL,
+
+    PRIMARY KEY (SEQ)
 );
