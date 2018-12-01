@@ -2,7 +2,7 @@ import {Sequelize} from 'sequelize-typescript'
 
 import Driver from '../models/driver'
 import Vendor from '../models/vendor'
-import Imformation from '../models/cago'
+import Cago from '../models/cago'
 import logManager from './logManager'
 
 const logger = logManager(module);
@@ -24,6 +24,6 @@ export const sequelize = new Sequelize({
 	timezone: '+09:00'
 });
 
-sequelize.addModels([Driver, Vendor, Imformation]);
+sequelize.addModels([Driver, Vendor, Cago]);
 
 //Driver.removeAttribute('id');

@@ -45,19 +45,17 @@ CREATE TABLE CAGO (
     DESTNATION_DAY            varchar(50) NOT NULL,
     DESTNATION_TIME           varchar(50) NOT NULL,
 
-<<<<<<< HEAD
     VENDOR_ID                 varchar(50) NOT NULL,
 
     STATUS                    INT NOT NULL DEFAULT 0,
 
     CREATED                   DATE NOT NULL DEFAULT NOW,
+    
+    START_DEST_LENGTH         INT NOT NULL,
 
     PRIMARY KEY (SEQ),
     FOREIGN KEY (`VENDOR_ID`) REFERENCES `VENDOR` (`ID`)
-=======
-    START_DEST_LENGTH         INT NOT NULL,
 
-    PRIMARY KEY (SEQ)
 );
 
 CREATE TABLE DELIVERY_HISTORY (

@@ -7,12 +7,10 @@ import kakaoRouter from './kakaoAuthController'
 import driverRouter from './driverController'
 import navigationRouter from './navigationController'
 import vendorRouter from './vendorController'
-<<<<<<< HEAD
-import imformationRouter from './imformationController'
+
 import jhRouter from './jhController'
-=======
+
 import cagoRouter from './cagoController'
->>>>>>> 532b9801f8e862e5ccc980513a22396530a216f1
 
 const router = express.Router();
 export default router
@@ -23,12 +21,9 @@ router.use('/', kakaoRouter);
 router.use('/driver', driverRouter);
 router.use('/navigation', navigationRouter);
 router.use('/vendor', vendorRouter);
-<<<<<<< HEAD
-router.use('/imformation', imformationRouter);
+
 router.use('/jh', jhRouter);
-=======
 router.use('/cago', cagoRouter);
->>>>>>> 532b9801f8e862e5ccc980513a22396530a216f1
 
 router.get('/', (req, res) => res.render('index.ejs'));
 router.get('/error', (req, res) => res.render('index.ejs'));
