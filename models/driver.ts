@@ -22,6 +22,10 @@ export default class User extends Model<User> {
 	kakaoId!: string;
 
 	@AllowNull(false)
+	@Column({type: DataType.STRING(50), field: 'NAME'})
+	name!: string;
+
+	@AllowNull(false)
 	@Column({type: DataType.STRING(50), field: 'CAR_MODEL'})
 	carModel!: string;
 
@@ -33,31 +37,31 @@ export default class User extends Model<User> {
 	@Column({type: DataType.STRING(10), field: 'BUSINESS_NUMBER'})
 	businessNumber!: string;
 
-	@AllowNull(false)
+	// @AllowNull(false)
 	@Column({type: DataType.STRING(100), field: 'ADDRESS_MAIN'})
 	addressMain!: string;
 
-	@AllowNull(false)
+	// @AllowNull(false)
 	@Column({type: DataType.STRING(100), field: 'ADDRESS_SUB'})
 	addressSub!: string;
 
-	@AllowNull(false)
+	// @AllowNull(false)
 	@Column({type: DataType.STRING(8), field: 'ZIP_CODE'})
 	zipCode!: string;
 
-	@AllowNull(false)
+	// @AllowNull(false)
 	@Column({type: DataType.STRING(10), field: 'SIDO'})
 	sido!: string;
 
-	@AllowNull(false)
+	// @AllowNull(false)
 	@Column({type: DataType.STRING(10), field: 'SIGUNGU'})
 	sigungu!: string;
 
-	@AllowNull(false)
+	// @AllowNull(false)
 	@Column({type: DataType.DOUBLE, field: 'LET'})
 	let!: string;
 
-	@AllowNull(false)
+	// @AllowNull(false)
 	@Column({type: DataType.DOUBLE, field: 'LONG'})
 	long!: string;
 

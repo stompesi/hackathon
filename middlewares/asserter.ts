@@ -6,27 +6,27 @@
 import {NextFunction, Request, Response} from 'express'
 
 import logManager from '../lib/logManager'
-import User from '../models/user'
+import Driver from '../models/driver'
 
 const logger = logManager(module);
 
 // 사용자 - 로그인 확인 요청
-export async function isUser(req: Request, res: Response, next: NextFunction) {
+export async function isDriver(req: Request, res: Response, next: NextFunction) {
 	logger.debug('사용자 - 로그인 확인 요청');
 
 	try {
-		if (!req.session!.email) return res.redirect('/user');
+		if (!req.session!.kakaoId) return res.redirect('/driver');
 
-		const user = await User.findOne({
-			where: {email: req.session!.email},
-			attributes: ['email']
+		const driver = await Driver.findOne({
+			where: {kakaoId: req.session!.kakaoId},
+			attributes: ['kakaoId']
 		});
 
-		if (user != null) return next();
-		return res.redirect('/user');
+		if (driver != null) return next();
+		return res.redirect('/driver');
 	}
 	catch (err) {
 		logger.error('사용자 로그인 요청 처리 실패', err.stack);
-		return res.redirect('/user');
+		return res.redirect('/driver');
 	}
 }

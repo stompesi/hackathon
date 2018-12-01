@@ -4,7 +4,7 @@ import logManager from '../lib/logManager'
 
 import kakaoRouter from './kakaoAuthController'
 
-import userRouter from './userController'
+import driverRouter from './driverController'
 import freightRouter from './freightController'
 import navigationRouter from './navigationController'
 
@@ -14,7 +14,7 @@ export default router
 const logger = logManager(module);
 
 router.use('/', kakaoRouter);
-router.use('/user', userRouter);
+router.use('/driver', driverRouter);
 router.use('/freight', freightRouter);
 router.use('/navigation', navigationRouter);
 

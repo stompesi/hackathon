@@ -14,10 +14,10 @@ import * as contractManager from '../../lib/contractManager'
 import {ErrorRedirect, ErrorResponse} from '../../lib/errores'
 import * as passwordManager from '../../lib/hashManager'
 import {AuthHelper} from '../../lib/phoneAuthManager'
-import {isUser} from '../../middlewares/asserter'
+import {isDriver} from '../../middlewares/asserter'
 import {wrapGenerator} from '../../middlewares/asyncWrapper'
 
-import User from '../../models/user'
+import User from '../../models/driver'
 
 const wrap = wrapGenerator(module);
 const authHelper = new AuthHelper();

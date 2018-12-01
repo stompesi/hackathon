@@ -1,0 +1,78 @@
+<div>
+  <form method="POST" action="/api/driver">
+    <input type="hidden" name="kakaoId" value=<%= kakaoId %>>
+    <div>
+      <span>기사님 기본 정보</span>
+    </div>
+    <div>
+      <label>
+        <span>차량운송번호</span>
+        <span>(필수)</span>
+      </label>
+      <br>
+      <input type="text" name="license">
+    </div>
+    <div>
+      <label>
+        <span>이름</span>
+        <span>(필수)</span>
+      </label>
+      <br>
+      <input type="text" name="name">
+    </div>
+    <div>
+      <label>
+        <span>차종</span>
+        <span>(필수)</span>
+      </label>
+      <br>
+      <input type="text" name="carModel">
+    </div>
+
+    <div>
+      <label>
+        <span>차량번호</span>
+        <span>(필수)</span>
+      </label>
+      <br>
+      <input type="text" name="carNumber">
+    </div>
+
+    <div>
+      <label>
+        <span>사업자번호</span>
+        <span>(필수)</span>
+      </label>
+      <br>
+      <input type="text" name="businessNumber">
+    </div>
+
+    <div>
+      <label>
+        <span>거주지</span>
+        <span>(필수)</span>
+      </label>
+      <br>
+      <input type="text" name="address">
+    </div>
+
+    <div>
+      <label>
+        <span>휴대폰 번호</span>
+        <span>(필수)</span>
+      </label>
+      <br>
+      <input type="number" name="phoneNumber" placeholder="Ex. 01012345678">
+    </div>
+
+    <div>
+      <label>
+        <span>회사</span>
+      </label>
+      <br>
+      <input type="text" name="company">
+    </div>
+
+    <button type="submit">등록</button>
+  </form>
+</div>

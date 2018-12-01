@@ -7,7 +7,7 @@ import {Sequelize} from 'sequelize-typescript'
 import {BadRequestError, ErrorRedirect, ErrorResponse, SendingAuthError} from '../../lib/errores'
 import logManager from '../../lib/logManager'
 
-import userRouter from './user'
+import driverRouter from './driver'
 import freightRouter from './freight'
 
 const router = express.Router();
@@ -19,7 +19,7 @@ const logger = logManager(module);
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 
-router.use('/user', userRouter);
+router.use('/driver', driverRouter);
 router.use('/freight', freightRouter);
 
 /**

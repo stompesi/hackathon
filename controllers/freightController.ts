@@ -6,14 +6,14 @@
  */
 
 import * as express from 'express'
-import {isUser} from '../middlewares/asserter'
+import {isDriver} from '../middlewares/asserter'
 import {wrapGenerator} from '../middlewares/asyncWrapper'
 
-import User from '../models/user'
+import Driver from '../models/driver'
 
 const wrap = wrapGenerator(module);
 
 const router = express.Router();
 export default router;
 
-router.get('/create', isUser, wrap('화믈 - 등록', async (req, res) => res.render('freight/create.ejs')));
+router.get('/create', isDriver, wrap('화믈 - 등록', async (req, res) => res.render('freight/create.ejs')));
