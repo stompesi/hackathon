@@ -1,0 +1,32 @@
+<div>
+    <form id="sign_form" method="POST" action="/api/vendor">
+      <div>
+        <span>출금하기</span>
+      </div>
+  
+      <div>
+        <label>
+          <span class="input-description">출금 금액</span>
+          <span class="input-required">(필수)</span>
+        </label>
+        <br>
+        <input type="text" id="name" name="id">
+      </div>
+  
+      <div class="form-item-container">
+        <span class="input-description">은행</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="companyName">
+      </div>
+
+      <div class="form-item-container">
+        <span class="input-description">계좌번호</span>
+        <span class="input-required">(필수)</span>
+        <br>
+        <input type="text" name="companyNumber">
+      </div>
+  
+      <button type="submit">출금</button>
+    </form>
+  </div>
