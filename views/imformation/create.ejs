@@ -1,67 +1,169 @@
-<div>
-    <form id="sign_form" method="POST" action="/api/imformation">
-      <div>
-        <span>사업자 기본 정보</span>
-      </div>
-  
-      <div>
-        <label>
-          <span class="input-description">차종</span>
-          <span class="input-required">(필수)</span>
-        </label>
-        <br>
-        <input type="text" id="name" name="carModel">
-      </div>
-  
-      <div class="form-item-container">
-        <span class="input-description">희망운수량</span>
-        <span class="input-required">(필수)</span>
-        <br>
-        <input type="text" name="wishCarry">
-      </div>
+<html>
+  <head>
+  <link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+  <link href="/css/common/apply.css" rel="stylesheet">
+  </head>
 
-      <div class="form-item-container">
-        <span class="input-description">출발지</span>
-        <span class="input-required">(필수)</span>
-        <br>
-        <input type="text" name="startPoint">
+  <body style="background: #eee;">
+  <div>
+    <nav class="nav">
+      <div class="logo">
+        <span>TRUCK</span><span class="bold">KING</span>
       </div>
-
-      <div class="form-item-container">
-        <span class="input-description">시작 날짜</span>
-        <span class="input-required">(필수)</span>
-        <br>
-        <input type="text" name="startDay">
+      <div class="menu">
+        <div>MY PAGE</div>
+        <div>LOGIN</div>
+        <div>QNA</div>
+        <div>NOTICE</div>
+        <div>HOME</div>
       </div>
-
-      <div class="form-item-container">
-        <span class="input-description">시작 시간</span>
-        <span class="input-required">(필수)</span>
-        <br>
-        <input type="text" name="startTime">
-      </div>
-
-      <div class="form-item-container">
-        <span class="input-description">도착지</span>
-        <span class="input-required">(필수)</span>
-        <br>
-        <input type="text" name="destination">
-      </div>
-
-      <div class="form-item-container">
-        <span class="input-description">종료 날짜</span>
-        <span class="input-required">(필수)</span>
-        <br>
-        <input type="text" name="destinationDay">
-      </div>
-
-      <div class="form-item-container">
-        <span class="input-description">종료 시간</span>
-        <span class="input-required">(필수)</span>
-        <br>
-        <input type="text" name="destinationTime">
-      </div>
-  
-      <button type="submit">등록</button>
-    </form>
+    </nav>
   </div>
+  
+  <div class="conetents">
+    <div class="login-text">배차 신청정보 입력</div>
+    
+    <div class="gargo-info-section">
+      <div class="input-section input-section-first">
+        <div class="title-section">
+          <div class="title">차량정보</div>
+        </div>
+
+        <div>
+          <div class="label">
+            차종
+            <span class="necessary-star">*</span>
+          </div>
+          <img src="/img/drop.png" class="input-first-icon">
+
+          <input class="input text-input" type="text" name="carModel">
+          <input class="input extra-text-input" type="text" name="carModel">
+        </div>
+
+        <div>
+          <div class="label">
+            희망 운송량
+            <span class="necessary-star">*</span>
+          </div>
+          <img src="/img/drop.png" class="input-first-icon">
+
+          <input class="input text-input" type="text" name="wishCarry">
+          <input class="input extra-text-input" type="text" name="wishCarry">
+        </div>
+      </div>
+
+      <div class="input-section">
+        <div class="title-section">
+          <div class="title">시간정보</div>
+        </div>
+
+        <div>
+          <div class="label">
+            상차지
+            <span class="necessary-star">*</span>
+          </div>
+          <img src="/img/search.png" class="input-first-icon">
+          <img src="/img/date.png" class="input-second-icon">
+
+          <input class="input text-input" type="text" name="startPoint">
+          <input class="input date-input" type="text" name="startDay">
+          <input class="input time-input" type="text" name="startTime">
+        </div>
+
+        <div>
+          <div class="label">
+            하차지
+            <span class="necessary-star">*</span>
+          </div>
+          <img src="/img/search.png" class="input-first-icon">
+          <img src="/img/date.png" class="input-second-icon">
+
+          <input class="input text-input" type="text" name="destination">
+          <input class="input date-input" type="text" name="destinationDay">
+          <input class="input time-input" type="text" name="destinationTime">
+        </div>
+      </div>
+      
+      <div>
+        <button class="add-btn">추가하기</button>
+      </div>
+    </div>
+
+    <div class="gargo-info-section">
+    <div class="input-section input-section-first">
+      <div class="title-section">
+        <div class="title">차량정보</div>
+      </div>
+
+      <div>
+        <div class="label">
+          차종
+          <span class="necessary-star">*</span>
+        </div>
+        <img src="/img/drop.png" class="input-first-icon">
+
+        <input class="input text-input" type="text" name="carModel">
+        <input class="input extra-text-input" type="text" name="carModel">
+      </div>
+
+      <div>
+        <div class="label">
+          희망 운송량
+          <span class="necessary-star">*</span>
+        </div>
+        <img src="/img/drop.png" class="input-first-icon">
+
+        <input class="input text-input" type="text" name="wishCarry">
+        <input class="input extra-text-input" type="text" name="wishCarry">
+      </div>
+    </div>
+
+    <div class="input-section">
+      <div class="title-section">
+        <div class="title">시간정보</div>
+      </div>
+
+      <div>
+        <div class="label">
+          상차지
+          <span class="necessary-star">*</span>
+        </div>
+        <img src="/img/search.png" class="input-first-icon">
+        <img src="/img/date.png" class="input-second-icon">
+
+        <input class="input text-input" type="text" name="startPoint">
+        <input class="input date-input" type="text" name="startDay">
+        <input class="input time-input" type="text" name="startTime">
+      </div>
+
+      <div>
+        <div class="label">
+          하차지
+          <span class="necessary-star">*</span>
+        </div>
+        <img src="/img/search.png" class="input-first-icon">
+        <img src="/img/date.png" class="input-second-icon">
+
+        <input class="input text-input" type="text" name="destination">
+        <input class="input date-input" type="text" name="destinationDay">
+        <input class="input time-input" type="text" name="destinationTime">
+      </div>
+    </div>
+    
+    <div>
+      <button class="add-btn">추가하기</button>
+      <button class="delete-btn">삭제하기</button>
+    </div>
+  </div>
+
+  
+
+  <div class="total-info-section">
+    <div class="title">총요금</div>
+    <div class="price">85000원</div>
+  </div>
+
+    <button class="create-btn"><a href="/imformation/result">배차요청하기</a></button>
+  </div>
+  </body>
+</html>
