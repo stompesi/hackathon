@@ -5,6 +5,8 @@ import logManager from '../lib/logManager'
 import kakaoRouter from './kakaoAuthController'
 
 import userRouter from './userController'
+import freightRouter from './freightController'
+import navigationRouter from './navigationController'
 
 const router = express.Router();
 export default router
@@ -13,6 +15,8 @@ const logger = logManager(module);
 
 router.use('/', kakaoRouter);
 router.use('/user', userRouter);
+router.use('/freight', freightRouter);
+router.use('/navigation', navigationRouter);
 
 router.get('/', (req, res) => res.render('index.ejs'));
 router.get('/error', (req, res) => res.render('index.ejs'));
