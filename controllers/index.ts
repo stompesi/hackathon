@@ -7,6 +7,7 @@ import kakaoRouter from './kakaoAuthController'
 import userRouter from './userController'
 import freightRouter from './freightController'
 import navigationRouter from './navigationController'
+import venderRouter from './venderController'
 
 const router = express.Router();
 export default router
@@ -17,6 +18,7 @@ router.use('/', kakaoRouter);
 router.use('/user', userRouter);
 router.use('/freight', freightRouter);
 router.use('/navigation', navigationRouter);
+router.use('/vender', venderRouter);
 
 router.get('/', (req, res) => res.render('index.ejs'));
 router.get('/error', (req, res) => res.render('index.ejs'));

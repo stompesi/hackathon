@@ -23,3 +23,14 @@ CREATE TABLE DRIVER (
 
     PRIMARY KEY (LICENSE)
 );
+
+CREATE TABLE VENDER (
+    ID                          varchar(50) NOT NULL,
+    PASSWD                      varchar(50) NOT NULL,
+    
+    BUSINESS_NUMBER             char(10) NOT NULL,
+    COMPANNY_NAME               varchar(50) NOT NULL,
+    COMPANNY_NUMBER             varchar(10) NOT NULL,
+
+    PRIMARY KEY (ID)
+);
