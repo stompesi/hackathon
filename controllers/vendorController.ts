@@ -30,18 +30,18 @@ router.get('/',
 		res.render('vendor/index.ejs');
 	}));
 
-router.get('/create',
+router.get('/join',
 	wrap('기업 - 등록 화면 요청', async (req, res) => {
-		const vendor = await Vendor.findOne({
-			where: {id: req.session!.id},
-			attributes: ['id']
-		});
+		// const vendor = await Vendor.findOne({
+		// 	where: {id: req.session!.id},
+		// 	attributes: ['id']
+		// });
 
-		if (vendor != null) {
-			return res.render('../imformation/index.ejs');
-		}
+		// if (vendor != null) {
+		// 	return res.render('../imformation/index.ejs');
+		// }
 
-		res.render('vendor/create.ejs');
+		res.render('vendor/join.ejs');
 	}));
 
 

@@ -18,6 +18,7 @@ import {isDriver} from '../../middlewares/asserter'
 import {wrapGenerator} from '../../middlewares/asyncWrapper'
 
 import Vendor from '../../models/vendor'
+import Imformation from '../../models/imformation'
 
 const wrap = wrapGenerator(module);
 const authHelper = new AuthHelper();
@@ -33,4 +34,5 @@ router.post('/', wrap('기사 - 등록', async (req, res) => {
 
   res.sendStatus(200);
 
+  res.render('/imformation/index.ejs');
 }));

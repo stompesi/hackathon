@@ -32,6 +32,20 @@ router.get('/',
 		res.render('imformation/index.ejs');
 	}));
 
+router.get('/result',
+	wrap('배차 - 완료 화면 요청', async (req, res) => {
+		// const imformation = await Imformation.findOne({
+		// 	// where: {id: req.session!.id},
+		// 	// attributes: ['id']
+		// });
+
+		// if (imformation != null) {
+		// 	return res.render('information/main.ejs');
+		// }
+
+		res.render('imformation/result.ejs');
+	}));
+
 router.get('/create',
 	wrap('배차 - 등록 화면 요청', async (req, res) => {
 		// const imformation = await Imformation.findOne({
