@@ -17,18 +17,23 @@ const router = express.Router();
 export default router;
 
 router.get('/',
-	wrap('기업 - 초기 화면 요청', async (req, res) => {
+	wrap('벤더 - 초기 화면 요청', async (req, res) => {
+		console.log(req.session!.vendorId);
 		const vendor = await Vendor.findOne({
-			where: {id: req.session!.id},
-			attributes: ['id']
+			where: {id: req.session!.vendorId},
+			attributes: ['COMPANNY_NAME']
 		});
 
 		if (vendor != null) {
-			return res.render('vendor/main.ejs');
+			return res.render('vendor/main.ejs', {
+				compannyName: vendor.companyName
+			});
 		}
 
 		res.render('vendor/index.ejs');
 	}));
+
+
 
 router.get('/join',
 	wrap('기업 - 등록 화면 요청', async (req, res) => {
@@ -38,7 +43,7 @@ router.get('/join',
 		// });
 
 		// if (vendor != null) {
-		// 	return res.render('../imformation/index.ejs');
+		// 	return res.render('../cago/index.ejs');
 		// }
 
 		res.render('vendor/join.ejs');

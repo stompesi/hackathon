@@ -1,7 +1,7 @@
 <html>
   <head>
-  <link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
-  <link href="/css/common/join.css" rel="stylesheet">
+    <link href="/css/common/join.css" rel="stylesheet">
+    <script src="/lib/jquery.min.js"></script>
   </head>
 
   <body style="background: #eee;">
@@ -21,6 +21,7 @@
   </div>
   
   <div class="conetents">
+    <form method="POST" action="/api/vendor">
     <div class="login-text">회원가입</div>
     
     <div class="acount-input">
@@ -41,7 +42,7 @@
           비밀번호
           <span class="necessary-star">*</span>
         </div>
-        <input class="join-input" type="text">
+        <input class="join-input" type="password" name="passwd">
       </div>
 
       <div>
@@ -49,7 +50,7 @@
           비밀번호 확인
           <span class="necessary-star">*</span>
         </div>
-        <input class="join-input" type="text" name="passwd">
+        <input class="join-input" type="password">
       </div>
     </div>
 
@@ -84,9 +85,26 @@
     </div>
     
     <div>
-      <button class="join-btn"><a href="/vendor">회원가입</a></button>
+      <button class="join-btn" class="submit">회원가입</button>
     </div>
-
+    
+    <script>
+      $('form').on('submit', (e) => {
+        debugger;
+        e.preventDefault();
+        $.ajax({
+          url: '/api/vendor',
+          type: 'POST',
+          data: $('form').serialize(),
+          complete: (xhr, textStatus) => {
+            if (xhr.status === 200) {
+              window.location.href = '/vendor';
+            }
+          }
+        });
+      });
+    </script>
+  </form>
   </div>
-  </body>
+</body>
 </html>

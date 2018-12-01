@@ -10,7 +10,7 @@ import logManager from '../../lib/logManager'
 import driverRouter from './driver'
 import freightRouter from './freight'
 import vendorRouter from './vendor'
-import imformationRouter from './imformation'
+import cagoRouter from './cago'
 
 const router = express.Router();
 export default router;
@@ -24,7 +24,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.use('/driver', driverRouter);
 router.use('/vendor', vendorRouter);
 router.use('/freight', freightRouter);
-router.use('/imformation', imformationRouter);
+router.use('/cago', cagoRouter);
 
 /**
  * `/api/*`의 error handler.

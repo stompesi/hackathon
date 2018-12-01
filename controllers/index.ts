@@ -8,7 +8,7 @@ import driverRouter from './driverController'
 import freightRouter from './freightController'
 import navigationRouter from './navigationController'
 import vendorRouter from './vendorController'
-import imformationRouter from './imformationController'
+import cagoRouter from './cagoController'
 
 const router = express.Router();
 export default router
@@ -20,7 +20,7 @@ router.use('/driver', driverRouter);
 router.use('/freight', freightRouter);
 router.use('/navigation', navigationRouter);
 router.use('/vendor', vendorRouter);
-router.use('/imformation', imformationRouter);
+router.use('/cago', cagoRouter);
 
 router.get('/', (req, res) => res.render('index.ejs'));
 router.get('/error', (req, res) => res.render('index.ejs'));
