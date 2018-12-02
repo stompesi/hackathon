@@ -42,12 +42,35 @@ router.get('/main', isDriver,
 
 router.get('/cago-list', isDriver,
 	wrap('기사 - 메인 페이지 요청', async (req, res) => {
+		const driverWallet = req.session!.walletAddress;;
+
 		const cagos = await Cago.findAll({
-			where: {status: 0}
+			where: {
+				status: 1,
+				driverId: driverWallet
+			}
 		});
 
 		res.render('driver/cago-list.ejs', {
-			cagos: cagos
+			cagos: cagos,
+			category: 'ingoing'
+		});
+	}));
+
+router.get('/cago-list/complete', isDriver,
+	wrap('기사 - 메인 페이지 요청', async (req, res) => {
+		const driverWallet = req.session!.walletAddress;;
+
+		const cagos = await Cago.findAll({
+			where: {
+				status: 2,
+				driverId: driverWallet
+			}
+		});
+
+		res.render('driver/cago-list.ejs', {
+			cagos: cagos,
+			category: 'complete'
 		});
 	}));
 
@@ -73,7 +96,18 @@ router.get('/cago-filter', isDriver,
 			cagos: cagos
 		});
 	}));
-	
+
+router.get('/cago/:seq', isDriver,
+	wrap('기사 - 메인 페이지 요청', async (req, res) => {
+		const cago = await Cago.findOne({
+			where: {seq: req.params.seq}
+		});
+
+		res.render('navigation/index.ejs', {
+			cago: cago
+		});
+	}));
+
 
 router.get('/logout', isDriver,
 	wrap('기사 - 로그아웃 요청', async (req, res) => {

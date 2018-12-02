@@ -58,7 +58,7 @@ router.get('/auth/login/kakao/callback',
 			try {
 				const driver = await Driver.findOne({
 					where: {kakaoId: clientInfo.kakaoId},
-					attributes: ['kakaoId']
+					attributes: ['kakaoId', 'license']
 				});
 
 				if (driver == null) {
@@ -70,7 +70,8 @@ router.get('/auth/login/kakao/callback',
 				}
 
 				// save session info
-				req.session.kakaoId = clientInfo.kakaoId;
+				req.session.kakaoId = driver.kakaoId;
+				req.session.driverId = driver.license;
 
 				return res.redirect('/driver/main');
 			}

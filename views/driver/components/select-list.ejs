@@ -5,7 +5,7 @@
 <div id="store_list_section">
 	<!-- 구현체 -->
 	<% for (const cago of cagos) { %>
-	<a href="/driver/cago/<%= cago.sql %>">
+	<a href="/driver/cago/<%= cago.seq %>">
 	<div style="
 	min-height: 142px;
 	background: white;
@@ -23,7 +23,7 @@
 		</div>
 
 		<div style="position: relative; width: 100%; text-align: center; background: url(/img/list_line.png) no-repeat; background-size: 100% 0.7em;">
-			<div style="display: inline-block; top: -0.5em; position: relative;background: white;">
+			<div style="display: inline-block; top: -0.5em; position: relative;background: white; color: #006fff;">
 			<%= numberWithCommas(cago.startDestLength) %>km
 			</div>
 		</div>

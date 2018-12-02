@@ -35,7 +35,24 @@ router.post('/', wrap('기사 - 등록', async (req: Request, res: Response) => 
 
   req.session!.vendorId = vendorInfo.id;
 
-  console.log(req.session!.vendorId);
-
   res.sendStatus(200);
 }));
+
+
+router.post('/login', wrap('기사 - 등록', async (req: Request, res: Response) => {
+  
+    const vendorInfo: Vendor = req.body;
+  
+		const vendor = await Vendor.findOne({
+			where: {id: vendorInfo.id, passwd: vendorInfo.passwd},
+			attributes: ['COMPANNY_NAME'],
+			raw: true
+		});
+
+		if (vendor != null) {
+      req.session!.vendorId = vendorInfo.id;
+			return res.sendStatus(200);
+		}
+
+    res.sendStatus(400);
+  }));

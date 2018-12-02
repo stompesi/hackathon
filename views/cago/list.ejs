@@ -28,7 +28,9 @@
               <span class="cago-request">&nbsp;</span><span>요청중</span><br>
             <% } else if(cago.status == 1) { %>
               <span class="cago-delivery"></span><span>배송중</span><br>
-            <% } else { %>
+            <% } else if(cago.status == 2) { %>
+              <span class="cago-reservation"></span><span>예약중</span><br>
+            <% } else if(cago.status == 3) { %>
               <span class="cago-complte"></span><span>배송완료</span><br>
             <% } %>
             <span>NO.<%=cago.seq%></span><br>

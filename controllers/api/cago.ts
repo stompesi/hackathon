@@ -37,3 +37,35 @@ router.post('/', wrap('배차 - 등록', async (req, res) => {
 
   res.sendStatus(200);
 }));
+
+router.post('/accept', wrap('배차 -', async (req, res) => {
+  
+    const cagoSeq = req.body.cagoSeq;
+    const driverId = req.session!.driverId;;
+
+    console.log(driverId, cagoSeq);
+
+    const vendor = await Cago.findOne({
+			where: {status: 1, driverId: driverId},
+			attributes: ['status']
+    });
+    
+    console.log(vendor == null);
+    if (vendor == null) {
+      Cago.update({status: 1, driverId: driverId}, {
+        where: {
+          seq: cagoSeq,
+        },
+        returning: true
+      });
+    } else {
+      Cago.update({status: 2, driverId: driverId}, {
+        where: {
+          seq: cagoSeq,
+        },
+        returning: true
+      });
+    }
+
+    res.sendStatus(200);
+  }));

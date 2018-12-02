@@ -300,7 +300,7 @@ a:active { color: inherit; }
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: #006fff;
+  background: #ffae00;
   border-radius: 50%;
   position: relative;
   top: 7px;
@@ -311,10 +311,9 @@ a:active { color: inherit; }
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: red;
+  background: #006fff;
   border-radius: 50%;
   position: relative;
-  top: 7px;
   margin-right: 10px;
 }
 
@@ -322,9 +321,18 @@ a:active { color: inherit; }
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: gren;
+  background: #666666;
   border-radius: 50%;
   position: relative;
-  top: 7px;
+  margin-right: 10px;
+}
+
+.cago-reservation {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #00ea69;
+  border-radius: 50%;
+  position: relative;
   margin-right: 10px;
 }

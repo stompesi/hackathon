@@ -12,7 +12,7 @@ import {
 	underscoredAll: true,
 	tableName: 'DRIVER'
 })
-export default class User extends Model<User> {
+export default class Driver extends Model<Driver> {
 	@PrimaryKey
 	@Column({type: DataType.STRING(9), field: 'LICENSE'})
 	license!: string;
