@@ -91,7 +91,7 @@
 			<div id="map_div"></div>        
 	</div>
 			
-			<div style="position: fixed; width: 90%; height: 400px; z-index: 10000000000; bottom:9%; background: white; margin: 5%; border-radius: 2em; font-size: 2.4em;">
+			<div style="position: fixed; width: 90%; height: 400px; z-index: 10000000000; bottom:9%; background: white; margin: 5%; border-radius: 0.5em; font-size: 2.4em;">
 				<div style=" min-height: 142px; background: white; margin-left: 1em; margin-right: 1em; border-radius: 0.5em; padding: 1em; margin-top: 1em;">	
 					<div style="height: 2.7em;">&nbsp;
 						<div style="float: left;display: inline-block;font-size: 1em; font-weight: bold;"> <%= cago.startPoint %> </div>
@@ -105,19 +105,19 @@
 					text-align: center;
 					background: url(/img/list_line.png) no-repeat;
 					background-size: 100% 0.7em;
-					height: 1.5em;">
+					height: 1.5em;
+					padding-top: 0.4em;">
 						<div style="display: inline-block; top: -0.3em; position: relative;background: white; color: #006fff;">
 						<%= numberWithCommas(cago.startDestLength) %>km
 						</div>
 					</div>
 					<div style="background: #E7F1FF;
-					border-radius: 0.5em;
+					border-radius: 0.3em;
 					height: 5.em;
 					text-align: center;
 					font-size: 2em;
 					color: #333;
-					opacity: 9%;
-					padding-top: 0.4em;">
+					opacity: 9%;">
 						<%= numberWithCommas(cago.cost) %>원
 					</div>
 				</div>
