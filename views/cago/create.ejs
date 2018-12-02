@@ -160,6 +160,10 @@
     </div>
 
     <script>
+      function numberWithCommas(x) {
+       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
       $('form').on('submit', (e) => {
         e.preventDefault();
         $.ajax({
@@ -178,7 +182,7 @@
         const length = parseInt(Math.random() * 1000);
         $('#start_dest_length').val(length);
         $('#cost').val(length * 1000);
-        $('#cost_text').text(length * 1000);
+        $('#cost_text').text(numberWithCommas(length * 1000));
       }
     </script>
   </body>
