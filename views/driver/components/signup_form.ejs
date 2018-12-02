@@ -1,0 +1,82 @@
+<div class="join-section">
+  <form id="sign_form" method="POST" action="/api/driver">
+    <input type="hidden" name="kakaoId" value="<%= kakaoId %>">
+    <div class="field-title">
+      <span>사용자 기본 정보</span>
+    </div>
+
+    <div class="form-item-container">
+      <label>
+        <span class="input-description">이름</span>
+        <span class="input-required">(필수)</span>
+      </label>
+      <br>
+      <input type="text" name="name">
+    </div>
+
+    <div class="form-item-container">
+      <span class="input-description">라이센스</span>
+      <span class="input-required">(필수)</span>
+      <br>
+      <input type="text" name="license">
+    </div>
+  
+    <div class="form-item-container">
+      <span class="input-description">차종</span>
+      <span class="input-required">(필수)</span>
+      <br>
+      <input type="text" name="carModel">
+    </div>
+
+    <div class="form-item-container">
+      <span class="input-description">차량번호</span>
+      <span class="input-required">(필수)</span>
+      <br>
+      <input type="text" name="carNumber">
+    </div>
+
+    <div class="form-item-container">
+      <span class="input-description">사업자번호</span>
+      <span class="input-required">(필수)</span>
+      <br>
+      <input type="text" name="businessNumber">
+    </div>
+
+    <div class="form-item-container">
+      <span class="input-description">거주지</span>
+      <span class="input-required">(필수)</span>
+      <br>
+      <input type="text" name="address">
+    </div>
+
+    <div class="form-item-container">
+      <span class="input-description">휴대폰 번호</span>
+      <span class="input-required">(필수)</span>
+      <br>
+      <input type="text" name="phoneNumber">
+    </div>
+
+    <div class="form-item-container">
+      <span class="input-description">회사</span>
+      <br>
+      <input type="text" name="company">
+    </div>
+  </form>
+  <button type="submit" id="join_btn">확인</button>
+
+  <script>
+  $('#join_btn').on('click', (e) => {
+    debugger;
+    e.preventDefault();
+    $.ajax({
+      url: '/api/driver',
+      type: 'POST',
+      data: $('#sign_form').serialize(),
+      complete: (xhr, textStatus) => {
+        if (xhr.status === 200) {
+          window.location.href = '/driver';
+        }
+      }
+    });
+  });
+</script>

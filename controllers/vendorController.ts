@@ -24,10 +24,9 @@ router.get('/',
 			raw: true
 		});
 
+		console.log(vendor);
 		if (vendor != null) {
-			return res.render('vendor/main.ejs', {
-				compannyName: vendor!.companyName
-			});
+			return res.render('vendor/main.ejs', vendor);
 		}
 
 		res.render('vendor/index.ejs');
@@ -44,9 +43,7 @@ router.get('/main', isVendor,
 			raw: true
 		});
 
-		return res.render('vendor/main.ejs', {
-			compannyName: vendor!.companyName
-		});
+		return res.render('vendor/main.ejs', vendor);
 	}));
 
 router.get('/logout', isVendor,

@@ -194,7 +194,7 @@ SolidityCache.getContractAndAbi()
  * @returns
  * @author stompesi
  */
-export function newAccount(passphrase: string): Promise<string> {
+export function newAccount(passphrase: any): Promise<string> {
 	logger.info('새로운 지갑 생성');
 
 	return web3.eth.personal.newAccount(passphrase);

@@ -19,7 +19,7 @@ export default class User extends Model<User> {
 
 	@AllowNull(false)
 	@Column({type: DataType.INTEGER, field: 'KAKAO_ID'})
-	kakaoId!: string;
+	kakaoId!: number;
 
 	@AllowNull(false)
 	@Column({type: DataType.STRING(50), field: 'NAME'})
@@ -38,32 +38,8 @@ export default class User extends Model<User> {
 	businessNumber!: string;
 
 	// @AllowNull(false)
-	@Column({type: DataType.STRING(100), field: 'ADDRESS_MAIN'})
-	addressMain!: string;
-
-	// @AllowNull(false)
-	@Column({type: DataType.STRING(100), field: 'ADDRESS_SUB'})
-	addressSub!: string;
-
-	// @AllowNull(false)
-	@Column({type: DataType.STRING(8), field: 'ZIP_CODE'})
-	zipCode!: string;
-
-	// @AllowNull(false)
-	@Column({type: DataType.STRING(10), field: 'SIDO'})
-	sido!: string;
-
-	// @AllowNull(false)
-	@Column({type: DataType.STRING(10), field: 'SIGUNGU'})
-	sigungu!: string;
-
-	// @AllowNull(false)
-	@Column({type: DataType.DOUBLE, field: 'LET'})
-	let!: string;
-
-	// @AllowNull(false)
-	@Column({type: DataType.DOUBLE, field: 'LONG'})
-	long!: string;
+	@Column({type: DataType.STRING(100), field: 'ADDRESS'})
+	address!: string;
 
 	@AllowNull(false)
 	@Column({type: DataType.STRING(10), field: 'PHONE_NUMBER'})
@@ -71,4 +47,7 @@ export default class User extends Model<User> {
 
 	@Column({type: DataType.STRING(50), field: 'COMPANNY'})
 	company!: string;
+
+	@Column({type: DataType.STRING(50), field: 'WALLET_ADDRESS'})
+	walletAddress!: string;
 }

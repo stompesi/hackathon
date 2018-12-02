@@ -9,6 +9,7 @@ import {
 } from 'sequelize-typescript'
 
 import Vendor from './vendor'
+import Driver from './driver'
 
 @Table({
 	underscored: true,
@@ -65,4 +66,21 @@ export default class Imformation extends Model<Imformation> {
 	@Column({type: DataType.STRING(50), field: 'VENDOR_ID'})
 	vendorId!: string;
 
+	@ForeignKey(() => Driver)
+	@Column({type: DataType.STRING(9), field: 'DRIVER_ID'})
+	driverId!: string;
+
+	@Column({type: DataType.INTEGER, field: 'STATUS'})
+	status!: number;
+
+	@Column({field: 'CREATED'})
+	created!: Date;
+
+	@AllowNull(false)
+	@Column({type: DataType.INTEGER, field: 'START_DEST_LENGTH'})
+	startDestLength!: number;
+
+	@AllowNull(false)
+	@Column({type: DataType.INTEGER, field: 'COST'})
+	cost!: number;
 }

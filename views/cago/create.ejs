@@ -9,8 +9,11 @@
     <%- include('../common/header.ejs') %>
     <div class="conetents">
       <form method="POST" action="/api/cago">
+        <input type="hidden" name="startDestLength" id="start_dest_length">
+        <input type="hidden" name="cost" id="cost">
+
         <div class="login-text">배차 신청정보 입력</div>
-        
+
         <div class="gargo-info-section">
           <div class="input-section input-section-first">
             <div class="title-section">
@@ -68,13 +71,14 @@
 
               <input class="input text-input" type="text" name="destinationPoint">
               <input class="input date-input" type="text" name="destinationDay">
-              <input class="input time-input" type="text" name="destinationTime">
+              <input class="input time-input" type="text" name="destinationTime" onchange="calcCost();">
             </div>
           </div>
-          
+          <!--
           <div>
             <button class="add-btn">추가하기</button>
           </div>
+          -->
         </div>
         <!--
           <div class="gargo-info-section">
@@ -146,7 +150,9 @@
         -->
         <div class="total-info-section">
           <div class="title">총요금</div>
-          <div class="price">85000원</div>
+          <div class="price">
+            <span id="cost_text">0</span> 원
+          </div>
         </div>
 
         <button class="create-btn" type="submit">배차요청하기</button>
@@ -167,6 +173,13 @@
           }
         });
       });
+
+      function calcCost() {
+        const length = parseInt(Math.random() * 1000);
+        $('#start_dest_length').val(length);
+        $('#cost').val(length * 1000);
+        $('#cost_text').text(length * 1000);
+      }
     </script>
   </body>
 

@@ -25,11 +25,11 @@
         <div class="cago-section">
           <div class="cago-info">
             <% if(cago.status == 0) { %>
-              <span></span><span>요청중</span><br>
+              <span class="cago-request">&nbsp;</span><span>요청중</span><br>
             <% } else if(cago.status == 1) { %>
-              <span></span><span>배송중</span><br>
+              <span class="cago-delivery"></span><span>배송중</span><br>
             <% } else { %>
-              <span></span><span>배송완료</span><br>
+              <span class="cago-complte"></span><span>배송완료</span><br>
             <% } %>
             <span>NO.<%=cago.seq%></span><br>
           </div>
@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="time-info">
-            <span><%=cago.created%></span>
+            <span><%=cago.created.toLocaleDateString("ko-KR", {year: '2-digit', month: '2-digit',day: '2-digit'})%></span>
           </div>
           <div class="car-number-info">
             <span><%=cago.carModel%></span>
@@ -60,6 +60,7 @@
         </div>
       <% } %>
       
+      <!--
       <div class="cago-section">
         <div class="cago-info">
           <span></span><span>배송중</span><br>
@@ -90,6 +91,7 @@
           <a href="">자세히보기><a>
         </div>
       </div>
+      -->
     </div>
   </div>
 </body>

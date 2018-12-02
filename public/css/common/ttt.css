@@ -44,11 +44,10 @@ a:active { color: inherit; }
 
 
 .menu > div {
-  float:right;
-  margin-top: 43px;
-
-  width: 124px;
-  height: 20px;
+  float: right;
+  padding-top: 43px;
+  width: 160px;
+  height: 79px;
   font-family: Roboto;
   font-size: 26px;
   font-weight: 500;
@@ -59,6 +58,13 @@ a:active { color: inherit; }
   text-align: left;
   color: #666666;
   font-weight: bold;
+
+  text-align: center;
+}
+
+.menu > div.active {
+  color: #006fff;
+  border-bottom: 2px solid #006fff;;
 }
 
 .login-text {
@@ -88,6 +94,7 @@ a:active { color: inherit; }
 
 .list-title-section {  
   background-color: #ffffff;
+  margin-bottom: 14px;
 }
 
 .list-title-section .cago-info {
@@ -194,7 +201,7 @@ a:active { color: inherit; }
 
 .cago-section {
   background: white;
-  margin-top: 14px;
+  margin-bottom: 14px;
 }
 .cago-section .cago-info {
   width: 290px;
@@ -287,4 +294,37 @@ a:active { color: inherit; }
 
   text-align: center;
   color: #006fff;
+}
+
+.cago-request {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #006fff;
+  border-radius: 50%;
+  position: relative;
+  top: 7px;
+  margin-right: 10px;
+}
+
+.cago-delivery {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: red;
+  border-radius: 50%;
+  position: relative;
+  top: 7px;
+  margin-right: 10px;
+}
+
+.cago-complte {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: gren;
+  border-radius: 50%;
+  position: relative;
+  top: 7px;
+  margin-right: 10px;
 }

@@ -1,0 +1,109 @@
+/* 필터 */
+.filter-section {
+	margin-top: 0.392857143em;
+	margin-bottom: 0.785714286em;
+	height: 1.285714286em;
+	clear: both;
+}
+
+.filter-section span {
+	color: #888888;
+	font-size: 0.857142857em;
+	line-height: 1.5em;
+}
+
+.filter-item {
+	width: 33.3%;
+	text-align: center;
+	float: left;
+}
+
+.select-description {
+	height: 1.428571429em; 
+	background: #f0f0f0; 
+	margin-bottom: 0.357142857em;
+}
+
+.select-description > span {
+	font-size: 0.857142857em; 
+	color: #545454; 
+	font-weight: 500;
+
+/* 상점 */
+#store_list_section {
+	padding: 0 2.916666667%;
+	background-color: #fbfbfb;
+}
+
+.store {
+	min-height: 5.25em;
+	margin-bottom: 0.07142857143em;
+	border-radius: 0.178571429em;
+/*	background-color: #ffffff;*/
+/*	border: solid 0.035714286em	#d9d9d9;*/
+	border-bottom: solid 1px #d9d9d9;
+	padding: 1em 1.392857143em;
+	overflow: auto;
+}
+.store:last-child{
+/*	border: 0;*/
+}
+
+.store-image,
+.store-store-info,
+.store-info {
+	display: inline-block;
+	word-break: break-all;;
+	height: 100%;
+}
+
+.store-image {
+	width: 3.285714286em;
+	height: 3.285714286em;
+	margin-right: 4%;
+	border-radius: 50%;
+	background-size: 3.285714286em 3.285714286em !important;
+}
+
+.store-store-info {
+	width: 60%;
+}
+
+.store-store-title {
+	color: #545454;
+}
+
+.store-store-title .store-name {
+	max-width: 80%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+ }
+
+.store-store-title .store-detail-business-type {
+	max-width: 25%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+
+	color:#FFCE54;
+	font-size:0.8em;
+ }
+
+.store-store-address {
+	font-size: 0.8571428571em;
+	display: inline-block;
+}
+
+.store-info {
+	text-align: center;
+	width: 17%;
+}
+
+.store-info > img {
+	width: 1.6em;
+	height: 1.6em;
+}
+

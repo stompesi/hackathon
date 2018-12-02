@@ -1,0 +1,42 @@
+<div id="store_list_section">
+	<!-- 구현체 -->
+	<% for (const cago of cagos) { %>
+	<a href="/driver/cago/<%= cago.sql %>">
+	<div style="
+	min-height: 142px;
+	background: white;
+	margin-left: 1em;
+	margin-right: 1em;
+	border-radius: 0.5em;
+	padding: 1em;
+	margin-top: 1em;
+">	
+		<div style="height: 2.7em;">&nbsp;
+			<div style="float: left;display: inline-block;font-size: 1em; font-weight: bold;"> 경기도 남양주시 마석 </div>
+			<div style="float: right;/* float: left; */display: inline-block;font-size: 1em; font-weight: bold;"> 충남 천안 </div>
+		</div>
+		<div>
+		</div>
+
+		<div style="position: relative;
+    width: 100%;
+    text-align: center;
+    background: url(/img/list_line.png) no-repeat;
+    background-size: 100% 0.7em;">
+			<div style="display: inline-block; background: white;">
+				24km
+			</div>
+		</div>
+		<div style="    background: #E7F1FF;
+    border-radius: 0.5em;
+    height: 1.5em;
+    text-align: center;
+    font-size: 2em;
+		color: #333;
+		opacity: 9%;">
+			150,000원
+		</div>
+</div>
+	</a>
+	<% } %>
+</div>

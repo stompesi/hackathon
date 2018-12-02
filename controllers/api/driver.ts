@@ -29,6 +29,11 @@ router.post('/', wrap('기사 - 등록', async (req, res) => {
 
   const driverInfo: Driver = req.body;
 
+  driverInfo.kakaoId = req.session.kakaoId;
+  driverInfo.walletAddress = await contractManager.newAccount("trucking" + driverInfo.kakaoId);
+
+  console.log(driverInfo);
+
   await Driver.create(driverInfo);
 
   res.sendStatus(200);

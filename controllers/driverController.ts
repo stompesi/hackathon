@@ -1,6 +1,6 @@
 /**
  * `/driver`로 시작하는 페이지들의 라우터.
- * 사용자과 관련된 페이지 렌더링
+ * 기사과 관련된 페이지 렌더링
  *
  * @author stompesi
  */
@@ -10,6 +10,7 @@ import {isDriver} from '../middlewares/asserter'
 import {wrapGenerator} from '../middlewares/asyncWrapper'
 
 import Driver from '../models/driver'
+import Cago from '../models/cago'
 
 const wrap = wrapGenerator(module);
 
@@ -17,7 +18,7 @@ const router = express.Router();
 export default router;
 
 router.get('/',
-	wrap('사용자 - 초기 화면 요청', async (req, res) => {
+	wrap('기사 - 초기 화면 요청', async (req, res) => {
 		const driver = await Driver.findOne({
 			where: {kakaoId: req.session!.kakaoId},
 			attributes: ['kakaoId']
@@ -31,7 +32,7 @@ router.get('/',
 	}));
 
 router.get('/main', isDriver,
-	wrap('사용자 - 메인 페이지 요청', async (req, res) => {
+	wrap('기사 - 메인 페이지 요청', async (req, res) => {
 		const renderData = {
 
 		};
@@ -39,8 +40,20 @@ router.get('/main', isDriver,
 		res.render('driver/main.ejs', renderData);
 	}));
 
+router.get('/cago-list', isDriver,
+	wrap('기사 - 메인 페이지 요청', async (req, res) => {
+		const cagos = await Cago.findAll({
+			where: {status: 0}
+		});
+
+		res.render('driver/cago-list.ejs', {
+			cagos: cagos
+		});
+	}));
+	
+
 router.get('/logout', isDriver,
-	wrap('사용자 - 로그아웃 요청', async (req, res) => {
+	wrap('기사 - 로그아웃 요청', async (req, res) => {
 		req.session!.destroy((err: any) => {
 			if (err) throw err;
 		});

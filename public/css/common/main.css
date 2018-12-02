@@ -43,11 +43,10 @@ a:active { color: inherit; }
 
 
 .menu > div {
-  float:right;
-  margin-top: 43px;
-
-  width: 124px;
-  height: 20px;
+  float: right;
+  padding-top: 43px;
+  width: 160px;
+  height: 79px;
   font-family: Roboto;
   font-size: 26px;
   font-weight: 500;
@@ -58,6 +57,13 @@ a:active { color: inherit; }
   text-align: left;
   color: #666666;
   font-weight: bold;
+
+  text-align: center;
+}
+
+.menu > div.active {
+  color: #006fff;
+  border-bottom: 2px solid #006fff;;
 }
 
 .login-text {

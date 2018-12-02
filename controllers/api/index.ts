@@ -11,9 +11,7 @@ import driverRouter from './driver'
 import freightRouter from './freight'
 import vendorRouter from './vendor'
 
-import jhRouter from './jh'
 import cagoRouter from './cago'
-
 
 const router = express.Router();
 export default router;
@@ -28,7 +26,7 @@ router.use('/driver', driverRouter);
 router.use('/vendor', vendorRouter);
 router.use('/freight', freightRouter);
 router.use('/cago', cagoRouter);
-router.use('/jh', jhRouter);
+
 /**
  * `/api/*`의 error handler.
  * `/api/*`에서 발생하는 모든 서버 에러는 이 handler를 통해서 응답을 전송

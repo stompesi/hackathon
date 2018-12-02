@@ -1,0 +1,274 @@
+/* TOP 부분 */
+
+html, body {
+	height: 100%;
+}
+
+body.top-margin {
+	margin-top: -3.357em;
+}
+
+body.top-margin-with-menu {
+	margin-top: 6.5em;
+	height: 100%;
+}
+
+.top-section {
+	height: 3.571428571em;
+	line-height: 2.142857143em;
+	padding: 0.714285714em 1.357142857em;
+	border-bottom: 2px solid #dadcde;
+
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	z-index: 1030;
+	background: white;
+}
+
+.back-section {
+	float: left;
+	margin-top: -0.071428571em;
+	min-width: 0.714285714em;
+}
+
+.back-section img {
+	width: 0.714285714em;
+	height: 0.928571429em;
+}
+
+
+.title-section {
+	color: #545454;
+	position: relative;
+	text-align: center;
+	z-index: -1;
+	margin-left:
+}
+
+.title-section > span {
+	font-size: 1.285714286em;
+}
+
+/* 여기까지 완료 */
+.search-section {
+	width: 16.77018634%;
+	margin-right: 4%;
+	float: right;
+	text-align: right;
+}
+
+.menu-section {
+	width: 4.968944099%;
+	float: right;
+	text-align: right;
+}
+
+#search {
+	font-size: 1em;
+	width: 100%;
+	height: 1.666666667em;
+	padding: 0 0.8333333335em;
+	border: 2px solid #ffce54;
+	border-radius: 1.472222222em;
+	outline: none;
+}
+
+#search.search {
+	width: 14.58333334em;
+	padding-left: 1.805555556em;
+	position: absolute;
+	z-index: 1;
+	left: 2.5em;
+	top: 0.5555555556em;
+}
+
+.search-icon {
+	color: #ffce54;
+	width: 1.944444445em;
+	height: 1.944444445em;
+	position: absolute;
+	z-index: 3;
+	top: 0.888888889em;
+	right: 2.222222223em;
+	background-image: url(/img/icon/icon_search.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.search-icon.search {
+	left: 3em;
+}
+
+/* 사이드 메뉴 */
+
+#menu {
+	font-size: 0.7777777778em;
+	color: #888888;
+
+	width: 68.3%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	right: -68.3%;
+	z-index: 3000;
+	background-color: white;
+	border-top: 0.3214285714em solid #ffce54;
+	border-bottom: 0.3214285714em solid #ffce54;
+	transition: All 0.5s ease;
+	-webkit-transition: All 0.5s ease;
+	-moz-transition: All 0.5s ease;
+	-o-transition: All 0.5s ease;
+
+	line-height: 2.5em;
+}
+
+.menu-close {
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	right: 1.678571429em;
+	top: 1.035714286em;
+	z-index: 1;
+	background-image: url("/img/x_off.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.menu-btn {
+	width: 1.2em;
+	height: 1.2em;
+	z-index: 1;
+	background-image: url("/img/icon/icon_hamburger.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	cursor: pointer;
+	margin-top: 0.2222222222em;
+}
+
+#menu.open {
+	right: 0px;
+}
+
+.menu-list {
+	margin-top: 12%;
+	text-align: center;
+	overflow: scroll;
+	height: 94%;
+}
+
+.profile-section {
+	height: 4em;
+	margin-bottom: 0.6071428571em;
+	text-align: center;
+}
+
+.profile-section > img {
+	height: 5em;
+	width: 5em;
+	border-radius: 50%;
+}
+
+.nickname-section {
+	height: 1.464286em;
+	margin-bottom: 0.507142857em;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.manu-main {
+	height: 6.5em;
+	vertical-align: middle;
+	border-top: 1px solid #d9d9d9;
+	padding-top: 1em;
+	padding-bottom: 1.142857143em;
+}
+
+.menu-middle {
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+}
+
+.manu-main img {
+	width: 2.428571em;
+	height: 2.428571em;
+}
+
+.side-menu-category {
+	height: 3em;
+	line-height: 3em;
+
+	padding-left: 8.947635994%;
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+
+	text-align: left;
+}
+
+.side-menu-category img {
+	margin-right: 0.6428571429em;
+	width: 1.428571429em;
+	height: 1.428571429em;
+}
+
+.side-menu-item {
+	font-size: 0.9285714286em;
+
+	padding-left: 20.74224708%;
+
+	text-align: left;
+}
+
+#dim {
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+	background: rgba(42, 42, 42, 0.5);
+	position: absolute;
+	display: none;
+
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+/* 대표 메뉴 부분 */
+.nav-section {
+	font-size: 1.142857143em;
+	height: 2.5em;
+	line-height: 1.46875em;
+	padding-top: 0.4375em;
+	margin-bottom: 0.3em;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 3.125em;
+	z-index: 1030;
+	background: white;
+}
+
+.nav-item {
+	width: 33.3%;
+	float: left;
+	text-align: center;
+	padding-bottom: 0.5625em;
+}
+
+.nav-item.region {
+	width: 50%;
+}
+
+nav div {
+	border-bottom: 2px solid #dadcde;
+}
+
+.active {
+	border-bottom: 4px solid #006fff;
+	color: #006fff !important;
+}

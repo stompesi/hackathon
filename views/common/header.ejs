@@ -4,15 +4,15 @@
       <a href="/vendor"><span>TRUCK</span><span class="bold">KING</span></a>
     </div>
     <div class="menu">
-      <% if( typeof isLogined == "undefined" || isLogined) {%>
+      <% if( typeof venderId == "undefined") {%>
         <div><a href="/vendor">LOGIN</a></div>
       <% } else {%>
         <div><a href="/vendor">LOGOUT</a></div>
       <% } %>
       <div><a href="/vendor">MY PAGE</a></div>
-      <div><a href="/vendor">QNA</a></div>
+      <div><a href="/vendor">Q & A</a></div>
       <div><a href="/vendor">NOTICE</a></div>
-      <div><a href="/vendor">HOME</a></div>
+      <div class="active"><a href="/vendor">HOME</a></div>
     </div>
   </nav>
 </div>

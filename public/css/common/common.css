@@ -1,0 +1,23 @@
+.empty-top {
+	min-height: 16.5%;
+}
+
+.logo-section {
+	min-height: 4%;
+}
+
+.logo-section > img {
+	width: 100%;
+	padding: 0 19%;
+	height: 100%;
+}
+
+.company-section {
+	min-height: 38%;
+	padding-left: 31.6%;
+}
+
+.kakao-login-section {
+	min-height: 8%;
+	padding: 0 16%;
+}

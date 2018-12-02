@@ -10,7 +10,6 @@ import {isImformation} from '../middlewares/asserter'
 import {isVendor} from '../middlewares/asserter'
 import {wrapGenerator} from '../middlewares/asyncWrapper'
 
-import Imformation from '../models/imformation'
 import Vendor from '../models/vendor'
 
 const wrap = wrapGenerator(module);

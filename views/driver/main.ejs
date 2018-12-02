@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bitcoupon</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- css lib import -->
+
+	<!-- js lib import -->
+	<script src="/lib/jquery.min.js"></script>
+	<script src="/lib/ejs.min.js"></script>
+
+	<!-- costom css import -->
+	<link href="/css/common/default.css" rel="stylesheet">
+	<link href="/css/common/header.css" rel="stylesheet">
+	<link href="/css/common/button.css" rel="stylesheet">
+	
+	<link href="/css/user/main/main.css" rel="stylesheet">
+	
+	<!-- costom js import -->
+</head>
+
+<body class="top-margin">
+	<%- include('./components/user_menu.ejs') %>
+	
+  <div class="contents-container" style="margin-left: 0.9em;
+  margin-right: 0.9em;">
+    
+    <div style="height: 4.25em; margin-bottom: 2em; margin-top: 9em;">
+      <div style="display: inline-block">
+        <span style="font-size: 1.7em;">안녕하세요</span><br>
+        <span style="font-size: 1.2em;">$400,000</span>
+      </div>
+
+      <div style="float: right;">
+        <img src="/img/profile2.png">
+      </div>
+    </div>
+
+    <div>
+      <a href="/driver/cago-list"><img src="/img/img_truck_001.png" style="width: 100%;"></a>
+    </div>
+
+    <div style="margin-top: 1em;">
+      <a href=""><img src="/img/img_truck_001.png" style="width: 100%;"></a>
+    </div>
+	</div>
+</body>
+</html>

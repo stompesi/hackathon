@@ -1,0 +1,21 @@
+/* button */
+button {
+	font-size: 1em;
+	
+	width: 100%;
+	height: 4em;
+	
+	padding: 0 0.952em;
+	
+	color: white;
+	font-weight: 500;
+
+	background: #006fff;
+}
+
+button.cancel,
+button[disabled] {
+	color: #545454;
+
+	background: #e9e9e9;
+}
