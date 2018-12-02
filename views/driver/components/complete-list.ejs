@@ -1,0 +1,34 @@
+<% function numberWithCommas(x) { %>
+<%  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); %>
+<% } %>
+
+<div id="store_list_section" style=" height: 100%; margin-top: 8em;">
+	<!-- 구현체 -->
+	<% for (const cago of cagos) { %>
+	<a href="/driver/cago/<%= cago.seq %>">
+		<div style=" min-height: 142px; background: white; margin-left: 1em; margin-right: 1em; border-radius: 0.5em; padding: 1em; margin-top: 1em;">	
+			<div style="height: 2.7em;">&nbsp;
+				<div style="float: left;display: inline-block;font-size: 1em; font-weight: bold;"> <%= cago.startPoint %> </div>
+				<div style="float: right;/* float: left; */display: inline-block;font-size: 1em; font-weight: bold;"> <%= cago.destinationPoint %> </div>
+			</div>
+			<div>
+			</div>
+
+			<div style="position: relative; width: 100%; text-align: center; background: url(/img/list_line.png) no-repeat; background-size: 100% 0.7em;">
+				<div style="display: inline-block; top: -0.5em; position: relative;background: white; color: #006fff;">
+				<%= numberWithCommas(cago.startDestLength) %>km
+				</div>
+			</div>
+			<div style="background: #E7F1FF; border-radius: 0.5em; height: 1.5em; text-align: center; font-size: 2em; color: #333; opacity: 9%;">
+				<%= numberWithCommas(cago.cost) %>원
+			</div>
+		</div>
+	</a>
+	<% } %>
+</div>
+
+<div>
+	
+</div>
+
+<!-- margin-top: 8em; -->
