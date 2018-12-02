@@ -1,0 +1,97 @@
+<html>
+<head>
+  <link href="/css/common/join.css" rel="stylesheet">
+  <script src="/lib/jquery.min.js"></script>
+</head>
+
+<body style="background: #eee;">
+  <%- include('../common/header.ejs') %>
+
+<div class="conetents">
+  <form method="POST" action="/api/vendor">
+  <div class="login-text">회원가입</div>
+  
+  <div class="acount-input">
+    <div class="title-section">
+      <div class="title">계정정보</div><div class="necessary">* 필수입력사항입니다.</div>
+    </div>
+
+    <div>
+      <div class="label">
+        아이디
+        <span class="necessary-star">*</span>
+      </div>
+      <input class="join-input" type="text" name="id">
+    </div>
+
+    <div>
+      <div class="label">
+        비밀번호
+        <span class="necessary-star">*</span>
+      </div>
+      <input class="join-input" type="password" name="passwd">
+    </div>
+
+    <div>
+      <div class="label">
+        비밀번호 확인
+        <span class="necessary-star">*</span>
+      </div>
+      <input class="join-input" type="password">
+    </div>
+  </div>
+
+  <div class="buisnessman-input">
+    <div class="title-section">
+      <div class="title">계정정보</div><div class="necessary">* 필수입력사항입니다.</div>
+    </div>
+
+    <div>
+      <div class="label">
+        회사이름
+        <span class="necessary-star">*</span>
+      </div>
+      <input class="join-input" type="text" name="companyName">
+    </div>
+
+    <div>
+      <div class="label">
+        사업자번호
+        <span class="necessary-star">*</span>
+      </div>
+      <input class="join-input" type="text" name="businessNumber">
+    </div>
+
+    <div>
+      <div class="label">
+        회사전화번호
+        <span class="necessary-star">*</span>
+      </div>
+      <input class="join-input" type="text" name="companyNumber">
+    </div>
+  </div>
+  
+  <div>
+    <button class="join-btn" class="submit">회원가입</button>
+  </div>
+  
+  <script>
+    $('form').on('submit', (e) => {
+      //debugger;
+      e.preventDefault();
+      $.ajax({
+        url: '/api/vendor',
+        type: 'POST',
+        data: $('form').serialize(),
+        complete: (xhr, textStatus) => {
+          if (xhr.status === 200) {
+            window.location.href = '/vendor';
+          }
+        }
+      });
+    });
+  </script>
+</form>
+</div>
+</body>
+</html>

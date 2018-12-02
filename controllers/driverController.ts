@@ -42,13 +42,16 @@ router.get('/main', isDriver,
 
 router.get('/cago-list', isDriver,
 	wrap('기사 - 진행중 페이지 요청', async (req, res) => {
-		const driverId = req.session!.driverId;;
+		const driverId = req.session!.driverId;
+
+		console.log(driverId);
 
 		const cagos = await Cago.findAll({
 			where: {
 				status: 1,
 				driverId: driverId
-			}
+			},
+			order: [['SEQ', 'DESC']]
 		});
 
 		res.render('driver/cago-list.ejs', {
@@ -65,7 +68,8 @@ router.get('/cago-list/reservation', isDriver,
 			where: {
 				status: 2,
 				driverId: driverId
-			}
+			},
+			order: [['SEQ', 'DESC']]
 		});
 
 		res.render('driver/cago-reservation-list.ejs', {
@@ -82,7 +86,8 @@ router.get('/cago-list/complete', isDriver,
 			where: {
 				status: 3,
 				driverId: driverId
-			}
+			},
+			order: [['SEQ', 'DESC']]
 		});
 
 		res.render('driver/cago-complete-list.ejs', {
@@ -94,7 +99,8 @@ router.get('/cago-list/complete', isDriver,
 router.get('/select-cago-list', isDriver,
 	wrap('기사 - 메인 페이지 요청', async (req, res) => {
 		const cagos = await Cago.findAll({
-			where: {status: 0}
+			where: {status: 0},
+			order: [['SEQ', 'DESC']]
 		});
 
 		res.render('driver/select-cago-list.ejs', {
@@ -106,7 +112,8 @@ router.get('/select-cago-list', isDriver,
 router.get('/cago-filter', isDriver,
 	wrap('기사 - 메인 페이지 요청', async (req, res) => {
 		const cagos = await Cago.findAll({
-			where: {status: 0}
+			where: {status: 0},
+			order: [['SEQ', 'DESC']]
 		});
 
 		res.render('driver/cago-filter.ejs', {
@@ -125,6 +132,16 @@ router.get('/cago/:seq', isDriver,
 		});
 	}));
 
+router.get('/cago/complete/:seq', isDriver,
+	wrap('기사 - 메인 페이지 요청', async (req, res) => {
+		const cago = await Cago.findOne({
+			where: {seq: req.params.seq}
+		});
+
+		res.render('navigation/complete.ejs', {
+			cago: cago
+		});
+	}));
 
 router.get('/logout', isDriver,
 	wrap('기사 - 로그아웃 요청', async (req, res) => {

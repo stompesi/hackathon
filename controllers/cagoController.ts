@@ -46,3 +46,21 @@ router.get('/list/vendor', isVendor,
 			cagos: cagos
 		});
 	}));
+
+router.get('/vendor/:cagoId', isVendor,
+	wrap('배차 - 등록 화면 요청', async (req, res) => {
+		res.render('cago/test.ejs');
+	}));	
+
+router.get('/complete/:cagoSeq', isVendor,
+	wrap('배차 - 등록 화면 요청', async (req, res) => {
+		const cagoSeq = req.query.cagoSeq;
+
+		const cago = await Cago.findOne({
+			where: {seq: cagoSeq}
+		})
+		
+		res.render('cago/complete.ejs', {
+			cago: cago
+		});
+	}));
