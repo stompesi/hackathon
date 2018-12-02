@@ -2,7 +2,7 @@
 <%  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); %>
 <% } %>
 
-<div id="store_list_section" style=" height: 100%; margin-top: 8em;">
+<div id="store_list_section">
 	<!-- 구현체 -->
 	<% for (const cago of cagos) { %>
 	<a href="/driver/cago/<%= cago.sql %>">

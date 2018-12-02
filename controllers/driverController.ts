@@ -50,6 +50,29 @@ router.get('/cago-list', isDriver,
 			cagos: cagos
 		});
 	}));
+
+router.get('/select-cago-list', isDriver,
+	wrap('기사 - 메인 페이지 요청', async (req, res) => {
+		const cagos = await Cago.findAll({
+			where: {status: 0}
+		});
+
+		res.render('driver/select-cago-list.ejs', {
+			cagos: cagos
+		});
+	}));
+	
+
+router.get('/cago-filter', isDriver,
+	wrap('기사 - 메인 페이지 요청', async (req, res) => {
+		const cagos = await Cago.findAll({
+			where: {status: 0}
+		});
+
+		res.render('driver/cago-filter.ejs', {
+			cagos: cagos
+		});
+	}));
 	
 
 router.get('/logout', isDriver,

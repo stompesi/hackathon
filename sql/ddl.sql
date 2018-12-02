@@ -55,6 +55,38 @@ CREATE TABLE CAGO (
     FOREIGN KEY (`DRIVER_ID`) REFERENCES `DRIVER` (`LICENSE`)
 
 );
+CREATE TABLE CAGO (
+    SEQ                       INT NOT NULL AUTO_INCREMENT,
+    
+    CAR_MODEL                 varchar(50) NOT NULL,
+    EXTERNAL_CAR_MODEL        varchar(50),
+
+    WISH_CARRY                varchar(50) NOT NULL,
+    EXTERNAL_WISH_CARRY       varchar(50),
+    
+    START_POINT               varchar(50) NOT NULL,
+    START_DAY                 varchar(50) NOT NULL,
+    START_TIME                varchar(50) NOT NULL,
+    
+    DESTNATION_POINT          varchar(50) NOT NULL,
+    DESTNATION_DAY            varchar(50) NOT NULL,
+    DESTNATION_TIME           varchar(50) NOT NULL,
+
+    VENDOR_ID                 varchar(50) NOT NULL,
+    DRIVER_ID                 CHAR(9),
+
+    STATUS                    INT NOT NULL DEFAULT 0,
+
+    CREATED                   DATETIME NOT NULL DEFAULT NOW(),
+    
+    START_DEST_LENGTH         INT NOT NULL,
+    COST         INT NOT NULL,
+
+    PRIMARY KEY (SEQ),
+    FOREIGN KEY (`VENDOR_ID`) REFERENCES `VENDOR` (`ID`),
+    FOREIGN KEY (`DRIVER_ID`) REFERENCES `DRIVER` (`LICENSE`)
+
+);
 
 CREATE TABLE DELIVERY_HISTORY (
     SEQ                       INT NOT NULL AUTO_INCREMENT,
