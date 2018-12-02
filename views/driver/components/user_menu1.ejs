@@ -18,18 +18,19 @@
 
 <div class="nav-section">
 	<nav>
-		<a href="/user/main">
-			<div class="nav-item active">
+		
+		<a href="/driver/cago-list">
+			<div class="nav-item <%= category == 'ingoing' ? 'active' : '' %>">
 				진행중
 			</div>
 		</a>
-		<a href="/user/stores">
-			<div class="nav-item">
+		<a href="/driver/cago-list/reservation">
+			<div class="nav-item <%= category == 'reservation' ? 'active' : '' %>">
 				예약
 			</div>
 		</a>
-		<a href="/user/membership">
-			<div class="nav-item">
+		<a href="/driver/cago-list/complete">
+			<div class="nav-item <%= category == 'complete' ? 'active' : '' %>">
 				완료
 			</div>
 		</a>
