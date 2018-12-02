@@ -87,9 +87,11 @@ a:active { color: inherit; }
 }
 
 .select-menu-section {
-  margin-left: 315px;
+  margin-left: 366px;
+  margin-top: 70px;
 }
 
 .card-section{
   float: left;
+  margin-right: 43px;
 }

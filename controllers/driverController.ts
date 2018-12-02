@@ -41,13 +41,13 @@ router.get('/main', isDriver,
 	}));
 
 router.get('/cago-list', isDriver,
-	wrap('기사 - 메인 페이지 요청', async (req, res) => {
-		const driverWallet = req.session!.walletAddress;;
+	wrap('기사 - 진행중 페이지 요청', async (req, res) => {
+		const driverId = req.session!.driverId;;
 
 		const cagos = await Cago.findAll({
 			where: {
 				status: 1,
-				driverId: driverWallet
+				driverId: driverId
 			}
 		});
 
@@ -57,18 +57,35 @@ router.get('/cago-list', isDriver,
 		});
 	}));
 
-router.get('/cago-list/complete', isDriver,
-	wrap('기사 - 메인 페이지 요청', async (req, res) => {
-		const driverWallet = req.session!.walletAddress;;
+router.get('/cago-list/reservation', isDriver,
+	wrap('기사 - 예약 페이지 요청', async (req, res) => {
+		const driverId = req.session!.driverId;;
 
 		const cagos = await Cago.findAll({
 			where: {
 				status: 2,
-				driverId: driverWallet
+				driverId: driverId
 			}
 		});
 
-		res.render('driver/cago-list.ejs', {
+		res.render('driver/cago-reservation-list.ejs', {
+			cagos: cagos,
+			category: 'reservation'
+		});
+	}));
+
+router.get('/cago-list/complete', isDriver,
+	wrap('기사 - 완료 페이지 요청', async (req, res) => {
+		const driverId = req.session!.driverId;;
+
+		const cagos = await Cago.findAll({
+			where: {
+				status: 3,
+				driverId: driverId
+			}
+		});
+
+		res.render('driver/cago-complete-list.ejs', {
 			cagos: cagos,
 			category: 'complete'
 		});
